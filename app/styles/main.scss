@@ -1,12 +1,12 @@
 //* scss-compile-options: --debug-info
 
 /************************************************************************************
-* Keaton Row
-* http://www.keatonrow.com;
+* Company Name
+* http://www.companyname.com;
 *
-* Keaton Row - Public Website
-* 02/09/2012
-* Frank Parent
+* Company Name - Project Name
+* 00/00/200
+* Author
 *************************************************************************************/
 
 @import "compass";
@@ -30,14 +30,8 @@
 
 // Modules
 // -----------------------------------------------------------------------------------
-@import "modules/_profile";
-@import "modules/_stylist-profile";
-@import "modules/_checkout";
-@import "modules/_product";
-@import "modules/_lookbook";
-@import "modules/_catalog";
-@import "modules/_tearsheets";
-@import "modules/_admin";
+@import "modules/_somemodule";
+
 
 
 // Pages
