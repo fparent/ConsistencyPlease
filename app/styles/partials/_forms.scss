@@ -6,205 +6,25 @@
 // Variables
 // -----------------------------------------------------------------------------------
 
-.txtbox-70      { width: 70px; }
-.txtbox-96      { width: 96px; }
-.txtbox-tiny    { width: 96px; }
-.txtbox-small   { width: 118px; }
-.txtbox-118     { width: 118px; }
+.txtbox-50      { width: 50px;  }
+.txtbox-100     { width: 100px; }
 .txtbox-150     { width: 150px; }
-.txtbox-160     { width: 160px; }
-.txtbox-mid     { width: 160px; }
-.txtbox-230     { width: 230px; }
-.txtbox-large   { width: 230px; }
-.txtbox-275     { width: 275px; }
-.txtbox-xlarge  { width: 275px; }
-.txtbox-full    { width: 100%; }
+.txtbox-200     { width: 200px; }
+.txtbox-250     { width: 250px; }
+.txtbox-300     { width: 300px; }
+.txtbox-full    { width: 100%;  }
 
-
-$txtbox-color: #e0f5f5;
 
 
 // Default values
 // -----------------------------------------------------------------------------------
 // Spacing under the fieldset
 fieldset {
-  margin-bottom: 4em;
+
 }
 
 
-// Default styles for the <legend> selector
-.legend {
-  color: #000;
-  @include font-size( 14 );
-}
 
-// Default Textbox, Textarea and Searchbox
-input[type="text"],
-input[type="password"],
-input[type="tel"],
-textarea,
-.input-select {
-  background-color: $txtbox-color;
-  @include font-size( 14 );
-  @extend %ft-sans;
-  font-weight: 300;
-  border: 0;
-  padding-left: 10px;
-  padding-right: 10px;
-
-  // This particular class is used to create the illusion of an invisible
-  // input. The user will only see text in the page but after clicking on it
-  // he will have the freedom of entering new text.
-  &.is-blended {
-    overflow: hidden;
-    background-color: #fff;
-    border: solid 1px #fff;
-
-    &:focus {
-      outline: 0;
-    }
-  }
-
-  .aqua-stripes & {
-    background-color: #fff;
-    border: solid 1px #999;
-  }
-
-  &:focus {
-    outline: 0;
-  }
-}
-
-
-input[type="text"],
-input[type="password"],
-input[type="tel"] {
-  height: 35px;
-  @include line-height( 35 );
-}
-
-textarea {
-  min-height: 60px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-
-// Default Checkboxes
-// -----------------------------------------------------------------------------------
-.input-checkbox {
-  width: 18px;
-  height: 18px;
-  float: left;
-  overflow: hidden;
-  background-color: #fff;
-  border: solid 1px #cfcfcf;
-  margin-right: 6px;
-  position: relative;
-  cursor: pointer;
-  @include clearfix;
-  clear: both;
-
-  input[type="checkbox"] {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
-  .checked {
-    width: 10px;
-    height: 10px;
-    display: block;
-    background-color: $brand-6;
-    margin: 3px auto 0;
-    cursor: pointer;
-  }
-}
-
-// Default Checkboxes across the site
-input[type="checkbox"] {
-  width: 15px;
-  height: 15px;
-  background-color: #fff;
-  border: solid 1px #bcbec0;
-  margin-right: 10px;
-  cursor: pointer;
-}
-
-
-// Default Lists
-// -----------------------------------------------------------------------------------
-.input-select {
-  height: 35px;
-  background-image: url(/images/icons/icon-darkArrows.png);
-  background-position: right 15px;
-  @include line-height( 35 );
-  @include inline-block;
-  padding-right: 40px;
-  position: relative;
-
-  select {
-    width: 100%;
-    height: 35px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    cursor: pointer;
-  }
-}
-
-select {
-  background-color: #fff;
-  border: solid 1px #000;
-  vertical-align: middle;
-}
-
-
-// Default Radio Buttons
-// -----------------------------------------------------------------------------------
-.input-radio {
-  width: 18px;
-  height: 18px;
-  @include inline-block;
-  background-color: #fff;
-  border: solid 1px #cfcfcf;
-  @include border-radius( 50% );
-
-  span, input {
-    display: block;
-    cursor: pointer;
-  }
-
-  .checked {
-    width: 10px;
-    height: 10px;
-    display: block;
-    background-color: $brand-6;
-    @include border-radius( 50% );
-    margin: 3px auto 0;
-  }
-}
-
-// Add some spacing between the inline radio buttons
-input[type="radio"] {
-  margin: 0 1em 0 3em;
-
-  &:first-of-type {
-    margin-left: 0;
-  }
-}
-
-
-// Default File Picker
-// -----------------------------------------------------------------------------------
-.input-upload {
-  @extend %ft-sans;
-  text-transform: uppercase;
-}
-
-input[type="file"] {
-  cursor: pointer;
-}
 
 
 
@@ -218,12 +38,6 @@ input[type="file"] {
   position: relative;
 
   label {
-    height: 35px;
-    @include font-size( 12 );
-    color: $text-dim;
-    @extend %ft-sans;
-    text-transform: uppercase;
-    margin-right: 20px;
 
     // Labels for requied fields are in bold
     &.required {
@@ -242,107 +56,7 @@ input[type="file"] {
 }
 
 
-// Type of form with the labels and inputs on the same line
-.standard {
-  label {
-    width: 200px;
-    margin-right: 20px;
-  }
-
-  .no-label {
-    padding-left: 220px;
-  }
-}
-
-
-// Type of form that has the label on one line and the inputs
-// on the next one
-.vertical {
-  label {
-    height: auto;
-    display: block;
-    margin-bottom: 4px;
-  }
-}
-
-
-
-// Header Search Box
-// -----------------------------------------------------------------------------------
-.search-input {
-  background-color: #f3f3f4;
-  padding-right: 33px;
-}
-
-
-.btn-search {
-  display: block;
-  position: absolute;
-  top: 2px;
-  right: 2px;
-}
-
-
-.icon-search {
-  width: 30px;
-  height: 30px;
-  background-image: url(/images/icons/icon-search.png);
-}
-
-
-
-// Request a Stylist
-// -----------------------------------------------------------------------------------
-.request-stylist input[type="text"] {
-  height: 26px;
-  margin-top: 4px;
-  @include line-height( 26 );
-}
-
-.request-stylist label {
-  width: 220px;
-  line-height: 34px;
-
-  & + input[type="text"] {
-    margin-right: 4px;
-  }
-}
-
-.request-stylist .btn-submit {
-  width: 72px;
-  height: 26px;
-  background-image: url(/images/forms/btn-submit.png);
-  position: absolute;
-  top: 4px;
-  right: -5px;
-  z-index: 9;
-}
 
 
 // Errors
 // -----------------------------------------------------------------------------------
-input[type="text"].error,
-input[type="password"].error,
-input[type="file"].error,
-select.error,
-textarea.error {
-  border: solid 1px $brand-4;
-  background-color: #f5e2e9;
-}
-
-.content .errorContainer {
-  color: $brand-4;
-  @extend %ft-sans;
-  text-transform: uppercase;
-
-  li:last-of-type {
-    margin-bottom: 40px;
-  }
-}
-
-// Change the text color of labels after checkboxes
-input[type="checkbox"].error {
-  & + label {
-    color: $brand-4;
-  }
-}

@@ -2,37 +2,35 @@
 // TYPOGRAPHY
 //************************************************************************************
 $title-color:   #000000;
-$text-color:    #000000;
+$text-color:    #697684;
 $text-dim:      #333333;
 $text-faint:    #6a6a6a;
 $text-weak:     #999999;
+$link-color:    #382F32;
 
 
 
 // Font families & Custom Fonts
 // -----------------------------------------------------------------------------------
 @font-face {
-    font-family: 'LearningCurve';
-    src: url('/styles/fonts/LearningCurve_OT-webfont.eot');
-    src: url('/styles/fonts/LearningCurve_OT-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/styles/fonts/LearningCurve_OT-webfont.woff') format('woff'),
-         url('/styles/fonts/LearningCurve_OT-webfont.ttf') format('truetype'),
-         url('/styles/fonts/LearningCurve_OT-webfont.svg#LearningCurveProRegular') format('svg');
+    font-family: 'FuturistFixed-widthRegular';
+    src: url('/styles/fonts/futrfw-webfont.eot');
+    src: url('/styles/fonts/futrfw-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/styles/fonts/futrfw-webfont.woff') format('woff'),
+         url('/styles/fonts/futrfw-webfont.ttf') format('truetype'),
+         url('/styles/fonts/futrfw-webfont.svg#FuturistFixed-widthRegular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
-.ft-sans        { font-family: 'Lato', sans-serif; }
-.ft-serif       { font-family: 'PT Serif', serif; }
-.ft-light       { font-family: 'Lato', sans-serif; font-weight: 100; }
-.ft-book        { font-family: 'Lato', sans-serif; font-weight: 300; }
-.ft-cursive     { font-family: 'LearningCurve', cursive; }
+.ft-sans        { font-family: sans-serif; }
+.ft-serif       { font-family: serif; }
+.ft-futurist    { font-family: 'FuturistFixed-widthRegular'; }
 
 %ft-sans      { @extend .ft-sans; }
 %ft-serif     { @extend .ft-serif; }
-%ft-book      { @extend .ft-book; }
-%ft-light     { @extend .ft-light; }
-%ft-cursive   { @extend .ft-cursive; }
+%ft-futurist  { @extend .ft-futurist; }
+
 
 
 // Headings
@@ -42,42 +40,47 @@ $text-weak:     #999999;
 // in the page to replicate the style of the headings while keeping a clean structure.
 // http://csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/
 h1, .alpha {
-  @extend %ft-book;
-  @include font-size( 46 );
-  @include line-height( 52 );
+  color: #697684;
+  font-size: 6em;
+  @extend %ft-futurist;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 1px #e6edf5;
+}
+
+
+h2, .beta {
+  font-size: 2em;
+  @extend %ft-futurist;
+  text-transform: uppercase;
+  font-weight: normal;
+  text-align: center;
+  text-shadow: 1px 1px 3px #e6edf5;
+  margin-bottom: 1em;
+}
+
+
+h3, .gamma {
+  color: #697684;
+  font-size: 1.5em;
+  text-shadow: 1px 1px 3px #e6edf5;
+}
+
+
+h4, .delta {
+  color: #fff;
+  font-size: 0.85em;
+  font-weight: normal;
   text-transform: uppercase;
 }
 
-// Make sure the static pages title are always the same size
-.split h1, .split .alpha {
-  margin-bottom: 50px;
-}
-
-h2, .beta {
-  @extend %ft-sans;
-  @include font-size( 36 );
-  @include line-height( 42 );
-}
-
-h3, .gamma {
-  @extend %ft-sans;
-  @include font-size( 28 );
-  @include line-height( 32 );
-}
-
-h4, .delta {
-  @include font-size( 24 );
-  @include line-height( 24 );
-  font-weight: 300;
-}
 
 h5, .epsilon {
   @include font-size( 18 );
 }
 
+
 h6, .zeta {
   @include font-size( 14 );
-  @extend %ft-sans;
   font-weight: bold;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -87,129 +90,52 @@ h6, .zeta {
 // Page & Section Titles
 // -----------------------------------------------------------------------------------
 .page-title {
-    margin-bottom: 1em;
+
 }
 
-.cursive-title {
-  @include font-size( 58 );
-  @extend %ft-cursive;
-  color: #ff0066;
-  margin-bottom: 28px;
-}
 
 .page-subtitle {
-    margin-bottom: 0.5em;
+
 }
+
 
 .small-title {
-    @extend %ft-sans;
-    @include font-size( 14 );
-    @include line-height( 21 );
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 10px;
+
 }
+
 
 .section-title {
-  font-style: italic;
-  text-transform: uppercase;
+
 }
 
-.alpha,
-.beta,
-.page-title,
-.page-subtitle {
-  color: #000;
-}
-
-// Small title with a black border underneath
-.title-separator {
-  width: 100%;
-  @extend %ft-sans;
-  @include font-size( 10 );
-  text-transform: uppercase;
-  text-align: center;
-  padding-bottom: 12px;
-  border-bottom: solid 1px #000;
-  margin-bottom: 0;
-  position: relative;
-}
-
-.arrow-down:after {
-  width: 0;
-  height: 0;
-  content: "\0020";
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 9px solid $text-color;
-  margin-left: -5px;
-  position: absolute;
-  bottom: -9px;
-  left: 50%;
-}
 
 
 
 // Font Sizes
 // -----------------------------------------------------------------------------------
-// The Clear All link in the catalog filters of the tear sheets
-.fs-8 { @include font-size( 8 ); }
-
-// The item summary info in the last page of the lookbook
-// The menu items of the logged in user menu in the header
-.fs-9 { @include font-size( 9 ); }
-
-// Small prints
-// Categories in the sidebar of the Catalog
-// The profile progression label in the stylist profile
-.fs-10 { @include font-size( 10 ); }
-
-// Stylist box title in the Customer Profile sidebar
-// The "Categories" list-item in the sidebar of the Stylist Profiles
-// The warning message before confirming an order in the checkout
-.fs-12 { @include font-size( 12 ); }
-
-// Item's name in the Look Detail section of the Lookbooks
-// Page subtitle in the Client Registration step 1
-.fs-14 { @include font-size( 14 ); }
-
-// The complete look total price in Lookbook
-.fs-16 { @include font-size( 16 ); }
-
-// Item's price in the Look Detail section of the Lookbooks
-// The Steps title in the User Signup Pages
-// The order's total in the Cart Summary
-// The checkout hyperlink in the lookbook pages
-// The description of the stylist type in the Stylist Stories page
+.fs-8   { @include font-size( 8 );  }
+.fs-9   { @include font-size( 9 );  }
+.fs-10  { @include font-size( 10 ); }
+.fs-12  { @include font-size( 12 ); }
+.fs-14  { @include font-size( 14 ); }
+.fs-16  { @include font-size( 16 ); }
 .fs-18  { @include font-size( 18 ); }
-p.fs-24 { @include line-height( 28 ); }
-
-// Individual Look's title in the Lookbook pages
-// The aqua box title ion the Lookbook Creation
-// Stylist's name in the lookbook postcard
-.fs-24 { @include font-size( 24 ); }
-p.fs-18 { @include line-height( 22 ); }
-
-// Feedback box title in the Lookbook summary
-.fs-30 { @include font-size( 30 ); }
-
-// The Steps numbers in the "How Keaton Row Works"
-.fs-36 { @include font-size( 36 ); }
-
-// The Lookbook's title in the model1 tmeplate
-.fs-52 { @include font-size( 52 ); }
+.fs-24  { @include font-size( 24 ); }
+.fs-30  { @include font-size( 30 ); }
+.fs-36  { @include font-size( 36 ); }
+.fs-52  { @include font-size( 52 ); }
 
 
 
 // Line-Heights
 // -----------------------------------------------------------------------------------
-
 .ln-12 { @include line-height( 12 ); }
 .ln-14 { @include line-height( 14 ); }
 .ln-18 { @include line-height( 18 ); }
 .ln-20 { @include line-height( 20 ); }
 .ln-22 { @include line-height( 22 ); }
 .ln-28 { @include line-height( 28 ); }
+
 
 
 // Font Colors
@@ -225,29 +151,22 @@ p.fs-18 { @include line-height( 22 ); }
 
 // Utilities
 // -----------------------------------------------------------------------------------
-// This is a combinaison of the loose, upper and ft-sans classes
 .alt-text {
-    font-family: 'Lato', sans-serif;
-    text-transform: uppercase;
+
 }
 
-// Bold, Aqua, Uppercase text usually used for sub section titles
+
+// Text usually used for sub section titles
 .leaders {
-  @include font-size( 18 );
-  @extend %ft-sans;
-  font-weight: bold;
-  color: #66cccc;
-  font-style: normal;
-  text-transform: uppercase;
+
 }
+
 
 // Use for tooltips, small buttons, helper, etc.
 .small-link {
-  @include font-size( 8 );
-  @extend %ft-sans;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+
 }
+
 
 // Add an arrow ">" before the text
 .arrow-before:before {

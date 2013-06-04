@@ -3,11 +3,11 @@
 //************************************************************************************
 
 main {
-    padding-bottom: 50px;
+
 }
 
 .wrapper {
-    width: 952px;
+    width: 960px;
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -39,17 +39,9 @@ main {
     width: 50%;
 }
 
-.categories + .split {
-    width: 830px;
-    margin-right: 0;
-    margin-left: 12px;
+.tiers	{
+  width: 33.3%;
 }
-
-.split + .bottom {
-    padding-top: 70px;
-}
-
-.tiers	{ width: 33.3%; }
 
 
 // Center of Interest
@@ -63,22 +55,22 @@ main {
 
 // Box content with borders all around
 .box {
-    border: solid 1px #ccc;
+
 }
 
 
 
 // Grid
 // -----------------------------------------------------------------------------------
-.grid-12    { width: 120px; }
+.grid-10    { width: 10%; }
 .grid-20    { width: 20%; }
-.grid-25    { width: 25%; }
-.grid-33    { width: 350px; }
+.grid-20    { width: 30%; }
+.grid-40    { width: 40%; }
 .grid-50    { width: 50%; }
-.grid-66    { width: 600px; }
-.grid-75    { width: 75%; }
+.grid-60    { width: 60%; }
+.grid-70    { width: 70%; }
 .grid-80    { width: 80%; }
-.grid-88    { width: 832px; }
+.grid-90    { width: 90%; }
 .grid-100   { width: 100%; }
 
 
@@ -86,223 +78,19 @@ main {
 // Sidebar
 // -----------------------------------------------------------------------------------
 .sidebar {
-    width: 230px;
-    margin-right: 10px;
 
-    // Each individual blocks in the sidebar.
-    // Used for styling purposes such as spacing between each block.
-    .block {
-        margin-bottom: 18px;
-    }
-
-    // The Signup form in the the static pages
-    .signup-box {
-        width: 195px;
-        padding: 12px 14px;
-        background-color: #85d6d6;
-        color: $text-color;
-        @include hatched-aqua;
-
-        .signup-title {
-            color: white;
-            @include font-size( 28 );
-            @include line-height( 25 );
-            font-style: italic;
-            text-align: left;
-            text-transform: uppercase;
-            margin-bottom: 16px;
-        }
-
-        p { @include line-height( 14 ); }
-
-        .signup-cta {
-            color: #fff;
-            @include font-size( 14 );
-            text-transform: uppercase;
-            margin-top: 38px;
-            margin-bottom: 18px;
-        }
-
-        label {
-            width: 140px;
-            margin-bottom: 18px;
-        }
-
-        .form-entry + .form-entry {
-            margin-bottom: 34px;
-        }
-
-        .txtEmail {
-            width: 100%;
-            height: 28px;
-            display: block;
-            border: 0;
-            margin-bottom: 8px;
-        }
-
-        .button {
-            height: 30px;
-            @include line-height( 30 );
-        }
-
-        .confirmation {
-            color: #fff;
-            @include font-size( 18 );
-            @include line-height( 22 );
-        }
-    }
 }
-
-.sidebar + .content {
-    width: 712px;
-}
-
-.right-col {
-    width: 350px;
-    overflow: hidden;
-}
-
-.categories {
-    padding-right: 10px;
-}
-
-
 
 
 
 // Header
 // -----------------------------------------------------------------------------------
 .site-header {
-    padding-top: 8px;
-    margin-bottom: 33px;
-
-    // Seasonal Background for Christmas
-    &.xmas {
-        background-image: url(/images/header/header-bg-xmas.jpg);
-        background-position: center top;
-    }
-
-    // Seasonal Background for Valentine's Day
-    &.valentine {
-        background-image: url(/images/header/header-bg-valentine.jpg);
-        background-position: center top;
-    }
-
-    .header-seasonal-msg {
-        width: 280px;
-        color: $text-weak;
-        position: absolute;
-        top: 44px;
-        left: 375px;
-        z-index: 2;
-    }
-
-    .upper-header {
-        min-height: 146px;
-        padding-bottom: 25px;
-        margin-bottom: 28px;
-        position: relative;
-    }
-
-    // Spacing under the social links in the header
-    .social-links {
-        margin-bottom: 35px;
-    }
-
-    .invite-friend-link {
-        float: left;
-        background-image: url(/images/icons/icon-lovebubble.png);
-        background-position: left center;
-        color: $text-faint;
-        padding-left: 24px;
-        margin-right: 24px;
-    }
-
-    .login-link {
-        float: left;
-        margin-bottom: 10px;
-        @include transition-property( color );
-        @include transition-duration( 0.1s );
-        @include transition-timing-function( ease-out );
-    }
-
-    // Hyperlink in the header that toggles the account
-    // menu with the settings and logout links
-    .control-panel {
-        text-align: right;
-        margin-bottom: 15px;
-        position: relative;
-
-        .faint {
-            color: $text-faint;
-            @include inline-block;
-            margin-right: 21px;
-
-            &:hover {
-                color: $brand-4;
-            }
-        }
-    }
-
-    // The user menu visible when a logged in user
-    // clicks on his name in the header
-    .user-menu {
-        width: 140px;
-        min-height: 26px;
-        background-color: $brand-1;
-        display: none;
-        position: absolute;
-        top: 28px;
-        right: 0;
-        z-index: 9;
-
-        &:after {
-            width: 0;
-            height: 0;
-            content: "\0020";
-            border-left: 7px solid transparent;
-            border-right: 7px solid transparent;
-            border-bottom: 10px solid $brand-1;
-            position: absolute;
-            top: -9px;
-            right: 6px;
-        }
-
-        .menu-link {
-            width: 100%;
-            height: 26px;
-            color: #fff;
-            @include font-size( 10 );
-            @include line-height( 26 );
-            font-weight: bold;
-            display: block;
-        }
-
-        .menu-link:hover {
-            background-color: #404040;
-        }
-    }
-
-    .cart-panel {
-        height: 15px;
-        @include line-height( 15 );
-        text-align: right;
-        margin-top: 10px;
-
-        .nb-item {
-            display: inline-block;
-            margin-left: 12px;
-        }
-
-        .icon-shoppingBag {
-            @include inline-block;
-            padding-right: 27px;
-        }
-    }
-
-    .icon-shoppingBag {
-        background-position: right center;
-    }
+  text-align: center;
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  margin-left: -300px;
 }
 
 
@@ -310,206 +98,17 @@ main {
 // Menu & Navigation
 // -----------------------------------------------------------------------------------
 .breadcrumb {
-    margin-bottom: 25px;
-    margin-left: 240px;
 
-    .breadcrumb-link {
-        display: inline;
-        color: #000;
-        @include font-size( 10 );
-        @extend %ft-sans;
-        text-transform: uppercase;
-        margin-right: 8px;
-
-        &:hover {
-            color: $brand-4;
-        }
-
-        &:after {
-            content: ">";
-            padding-left: 8px;
-        }
-
-        &:last-of-type:after {
-            content: "";
-        }
-    }
 }
 
 
 .secondary-nav {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    text-align: right;
-
-    // Main navigation menus in the public header
-    .secondary-nav-link {
-        @include inline-block;
-        vertical-align: top;
-        color: $text-faint;
-        @extend %ft-sans;
-        @include font-size( 12 );
-        text-transform: uppercase;
-        margin-left: 36px;
-
-        @include transition-property( color );
-        @include transition-duration( 0.1s );
-        @include transition-timing-function( ease-out );
-
-        &:hover {
-            color: $brand-6;
-        }
-    }
-
-    // Spacing between the "KR" and "Blog" for the heart icon bg
-    .first-word {
-        @include inline-block;
-        margin-right: 20px;
-    }
-
-    .icon-heart {
-        background-position: 21px 3px;
-
-        &:hover {
-            background-position: 21px -17px;
-        }
-    }
-
-    .icon-gift {
-        width: 13px;
-        height: 15px;
-        background-position: 0 2px;
-
-        &:hover {
-            background-position: -13px 2px;
-        }
-    }
 
 }
 
-
-// Header visible when the user (stylist or client) is logged in.
-// Has more options than the regular header, including a 2 level
-// navigation.
-.main-nav-bar {
-    border: solid 1px #e8e8e8;
-}
 
 .main-nav {
-    width: 100%;
-    height: 45px;
-    background-color: #fff;
-    @include line-height( 40 );
-    @include light-gradient;
-    position: relative;
 
-    .nav-item {
-        height: 45px;
-        display: block;
-        float: left;
-        color: $text-color;
-        @extend %ft-sans;
-        @include font-size( 12 );
-        text-transform: uppercase;
-        padding: 0 28px;
-
-        &.disabled {
-            color : $text-faint;
-        }
-
-        &:hover {
-            @include light-grey-gradient;
-        }
-
-        &:active,
-        &.is-active {
-            @include light-gradient-invert;
-            @include box-shadow( inset rgba( 153, 153, 153, 0.75 ) 1px 2px 3px );
-            border-bottom: inset 1px #dbdbdb;
-        }
-
-        // Disabled links, used when users are signing up and
-        // we display a navigation with disabled menus instead
-        // of hidding them.
-        &.disabled {
-            color: #ccc;
-            cursor: default;
-        }
-
-        // Overwrite the default hover effect on the disabled
-        // links so the user don't get confused.
-        &.disabled:hover,
-        &.disabled:active {
-            @include light-gradient;
-            @include box-shadow( none );
-        }
-    }
-}
-
-// Set the height manually when the submenu is visible
-// because of it's absolute positioning
-.has-visible-submenu {
-    height: 90px;
-}
-
-.sub-nav {
-    width: 100%;
-    height: 38px;
-    background-color: #fff;
-    @include line-height( 38 );
-
-    .subnav-item {
-        height: 100%;
-        display: block;
-        float: left;
-        color: $text-weak;
-        @extend %ft-sans;
-        @include font-size( 12 );
-        text-transform: uppercase;
-        padding: 0 28px;
-        position: relative;
-
-        &:hover,
-        &.is-active {
-            color: $text-color;
-        }
-
-        &.is-active:after {
-            width: 9px;
-            height: 5px;
-            content: "\0020";
-            background-image: url(/images/nav/sub-nav-active.png);
-            margin-left: -9px;
-            position: absolute;
-            left: 50%;
-            bottom: -1px;
-            z-index: 3;
-        }
-    }
-}
-
-
-
-// Left Menu Navigation in the statuc pages
-.left-menu {
-    padding-left: 14px;
-
-    .left-menu-link {
-        display: block;
-        color: $text-faint;
-        @include line-height( 14 );
-        text-transform: uppercase;
-        margin-bottom: 14px;
-        position: relative;
-
-        &:hover,
-        &.is-active {
-            color: $text-color;
-            font-weight: 400;
-        }
-    }
 }
 
 
@@ -517,41 +116,5 @@ main {
 // Footer
 // -----------------------------------------------------------------------------------
 .site-footer {
-    @include font-size( 12 );
 
-    & > .wrapper {
-        height: 164px;
-        background-color: #666;
-        color: #fff;
-        padding-top: 18px;
-        border-top: solid 1px #b8b8b8;
-    }
-
-    .social-links {
-        width: 110px;
-        margin-right: 10px;
-        margin-left: 276px;
-    }
-
-    .footer-content {
-        @extend %ft-sans;
-    }
-
-    .col {
-        width: 160px;
-        float: left;
-        margin-bottom: 20px;
-        margin-right: 10px;
-    }
-
-    .footer-links a {
-        display: block;
-        color: #fff;
-        @extend %ft-sans;
-    }
-}
-
-
-.copyright {
-    margin-top: 8px;
 }
