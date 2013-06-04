@@ -1,0 +1,115 @@
+//************************************************************************************
+// MODULES & MIXINS
+//************************************************************************************
+
+
+// Mixins
+// -----------------------------------------------------------------------------------
+
+// Use REM in modern browsers and fallback to pixels for IE8-
+// http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/
+//
+// $sizeValue - The desired font-size in pixels.
+//
+// Compatible in IE6+.
+@mixin font-size( $sizeValue: 1.6 ) {
+  font-size: ($sizeValue * 1) + px;
+  font-size: ($sizeValue / 10 * 0.625) + rem;
+}
+
+
+// Use REM in modern browsers and fallback to pixels for IE8-
+// http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/
+//
+// $sizeValue - The desired font-size in pixels.
+//
+// Compatible in IE6+.
+@mixin line-height( $sizeValue: 1.6 ) {
+  line-height: ($sizeValue * 1) + px;
+  line-height: ($sizeValue / 10 * 0.625) + rem;
+}
+
+
+// Legacy support for inline-block in IE6-IE7
+//
+// Compatible in IE6+.
+@mixin inline-block {
+  display: inline-block;
+  //vertical-align: middle;
+}
+
+
+@mixin border-black( $side ) {
+  border-#{$side}: solid 1px #000;
+}
+
+
+// Archived Lookbook
+// -----------------------------------------------------------------------------------
+// Share style for the active and hover state
+@mixin lookbook-accent() {
+  border-bottom: solid 7px $brand-4;
+
+  &:after {
+    width: 0;
+    height: 0;
+    content: "\0020";
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 9px solid $brand-4;
+    position: absolute;
+    top: 0;
+    left: 44%;
+  }
+}
+
+
+
+@mixin ribbon( $text, $bgColor, $width: 100% ) {
+  width: $width;
+  height: 20px;
+  background-color: $bgColor;
+  color: #000;
+  content: $text;
+  @extend %ft-sans;
+  font-style: normal;
+  text-align: center;
+  text-transform: uppercase;
+  position: absolute;
+  top: 280px;
+  left: 0;
+  z-index: 2;
+
+  .csstransitions & {
+    @include line-height( 20 );
+  }
+}
+
+
+@mixin triangle( $direction, $size, $color ) {
+  @if (unitless($size)) {
+    $size: $size * 1px;
+  }
+
+  &:after {
+    width: 0;
+    height: 0;
+    content: "\0020";
+
+    @if $direction == "down" {
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: $size solid $color;
+      bottom: $size * -1;
+    } @else {
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-bottom: $size solid $color;
+      top: $size * -1;
+    }
+
+    margin-left: -5px;
+    position: absolute;
+    left: 50%;
+  }
+}

@@ -1,0 +1,641 @@
+//************************************************************************************
+// BRAND & SKINS
+// colors, specific typography, logos
+//************************************************************************************
+
+$brand-1: #000000; // Black
+$brand-2: #666666; // Gray 40
+$brand-3: #ffcc33; // Gold
+$brand-4: #ff0066; // Broadwaypink
+$brand-5: #003366; // Navy Blue
+$brand-6: #66cccc; // Aqua
+$brand-7: #cc3333; // Red
+$brand-8: #0066cc; // Royal Blue
+
+
+
+// Brand colors
+// -----------------------------------------------------------------------------------
+.brand-1 { color: $brand-1; }
+.brand-2 { color: $brand-2; }
+.brand-3 { color: $brand-3; }
+.brand-4 { color: $brand-4; }
+.brand-5 { color: $brand-5; }
+.brand-6 { color: $brand-6; }
+.brand-7 { color: $brand-7; }
+.brand-8 { color: $brand-8; }
+
+
+
+// Brand backgrounds
+// -----------------------------------------------------------------------------------
+.bg-brand1 { background-color: $brand-1; }
+.bg-brand2 { background-color: $brand-2; }
+.bg-brand3 { background-color: $brand-3; }
+
+@mixin hatched-gray {
+    background: url(/images/patterns/hatched-pattern.png);
+    background-repeat: repeat;
+}
+
+@mixin hatched-aqua {
+    background-image: url(/images/patterns/hatched-pattern-aqua.png);
+    background-repeat: repeat;
+}
+
+@mixin hatched-blue {
+    background: url(/images/patterns/hatched-pattern-blue.jpg);
+    background-repeat: repeat;
+}
+
+@mixin hatched-dark {
+    background: url(/images/patterns/hatched-pattern-dark.png);
+    background-repeat: repeat;
+}
+
+@mixin hatched-light {
+    background: url(/images/patterns/hatched-pattern-lightGray.png);
+    background-repeat: repeat;
+}
+
+@mixin hatched-light-gradient {
+    background: url(/images/patterns/hatched-pattern-gradient.png);
+    background-repeat: repeat;
+}
+
+.gray-stripes       { @include hatched-gray; }
+.aqua-stripes       { @include hatched-aqua; }
+.blue-stripes       { @include hatched-blue; }
+.dark-stripes       { @include hatched-dark; }
+.light-stripes      { @include hatched-light; }
+.gradient-stripes   { @include hatched-light-gradient; }
+
+
+
+// Logo
+// -----------------------------------------------------------------------------------
+.logo-main {
+    position: absolute;
+    top: 24px;
+    left: 0;
+}
+
+.header-full .logo-main {
+    left: 30px;
+}
+
+.logo-footer {
+    position: absolute;
+    top: 16px;
+    left: 36px;
+}
+
+
+
+// Borders
+// -----------------------------------------------------------------------------------
+@mixin stitches( $side ) {
+    background-image: url(/images/patterns/stitches.gif);
+    background-repeat: repeat-x;
+    background-position: left $side;
+}
+
+.stitches-top {
+    @include stitches( top );
+}
+
+.stitches-bottom {
+    @include stitches( bottom );
+}
+
+.stitches {
+    @include stitches( top );
+}
+
+
+
+// Gradients
+// -----------------------------------------------------------------------------------
+@mixin blue-gradient {
+    background-color: #273b70; // Old browsers
+    @include filter-gradient(#273b70, #374d81, vertical); // IE6-9
+    @include background-image(linear-gradient(top,  #273b70 0%,#374d81 100%));
+}
+
+
+@mixin blue-gradient-invert {
+    background-color: #374e82;
+    @include filter-gradient(#374e82, #273c71, vertical);
+    @include background-image(linear-gradient(top,  #374e82 0%,#273c71 100%));
+}
+
+
+@mixin aqua-gradient {
+    background-color: rgb(101,202,202);
+    @include filter-gradient(#65caca, #3e7d7d, vertical);
+    @include background-image(linear-gradient(top,  rgba(101,202,202,1) 0%,rgba(62,125,125,1) 100%));
+}
+
+
+@mixin red-gradient {
+    background-color: rgb(252,0,101);
+    @include filter-gradient(#fc0065, #9c003e, vertical);
+    @include background-image(linear-gradient(top,  rgba(252,0,101,1) 0%,rgba(156,0,62,1) 100%));
+}
+
+
+@mixin light-gradient {
+    background-color: #fefefe;
+    background-color: rgb(255,255,255);
+    @include filter-gradient(#ffffff, #e8e8e8, vertical);
+    @include background-image(linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(232,232,232,1) 100%));
+}
+
+
+@mixin light-gradient-invert {
+    background-color: #cecece;
+    background-color: rgb(206,206,206);
+    @include filter-gradient(#cecece, #ececec, vertical);
+    @include background-image(linear-gradient(top,  rgba(206,206,206,1) 0%,rgba(236,236,236,1) 100%));
+}
+
+
+@mixin light-grey-gradient {
+    background-color: #ebebeb;
+    background-color: rgb(235,235,235);
+    @include filter-gradient(#ebebeb, #dedede, vertical);
+    @include background-image(linear-gradient(top,  rgba(235,235,235,1) 0%,rgba(222,222,222,1) 100%));
+}
+
+
+@mixin dark-gradient {
+    background-color: rgb(102,102,102);
+    @include filter-gradient(#666666, #3e3e3e, vertical);
+    @include background-image(linear-gradient(top,  rgba(102,102,102,1) 0%,rgba(62,62,62,1) 100%));
+}
+
+
+.blue-gradient          { @include blue-gradient; }
+.blue-gradient-invert   { @include blue-gradient-invert; }
+.aqua-gradient          { @include aqua-gradient; }
+.red-gradient           { @include red-gradient; }
+.light-gradient         { @include light-gradient; }
+.light-gradient-invert  { @include light-gradient-invert; }
+.light-grey-gradient    { @include light-grey-gradient; }
+.dark-gradient          { @include dark-gradient; }
+
+
+
+// Buttons
+// -----------------------------------------------------------------------------------
+
+// The default square call-to-action buttons with dark-gradient
+//
+// :hover               - Invert the gradient effect
+// :active              - Darken the text color
+//
+// Styleguide 0.0.1.
+.cta-primary {
+    height: 35px;
+    background-color: #000;
+    @extend %ft-sans;
+    @include line-height( 35 );
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0 20px;
+    border: solid 1px #000;
+
+    &:hover {
+        background-color: #404040;
+    }
+
+    &:active {
+        color: #74767b;
+    }
+
+    // Exception when the class is applied on a <a>
+    .content & {
+        color: #fff;
+    }
+
+  -webkit-transition: all 0.3s ease-out;
+     -moz-transition: all 0.3s ease-out;
+       -o-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+
+}
+
+
+
+// The secondary call-to-action buttons with light-gradient
+//
+// :hover               - Invert the gradient effect
+// :active              - Lighten the text color
+//
+// Styleguide 0.0.1.
+.cta-secondary {
+    height: 35px;
+    background-color: #666666;
+    @extend %ft-sans;
+    @include line-height( 35 );
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0 20px;
+    border: solid 1px #666666;
+
+    &:hover {
+        background-color: #777;
+    }
+
+    &:active {
+        color: #666;
+    }
+
+  -webkit-transition: all 0.3s ease-out;
+     -moz-transition: all 0.3s ease-out;
+       -o-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+}
+
+
+// The secondary call-to-action buttons with light-gradient
+//
+// :hover               - Invert the gradient effect
+// :active              - Lighten the text color
+//
+// Styleguide 0.0.1.
+.cta-accent {
+    height: 35px;
+    background-color: $brand-6;
+    @extend %ft-sans;
+    @include line-height( 35 );
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0 20px;
+    border: solid 1px #cceeee;
+
+    &:hover {
+        background-color: #8cd9d9;
+    }
+
+    &:active {
+        color: #666;
+    }
+
+  -webkit-transition: all 0.3s ease-out;
+     -moz-transition: all 0.3s ease-out;
+       -o-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+}
+
+
+// Similar to the cta-accent button but used in specific cases only
+// especially to attract the attention, like in the checkout pages
+//
+// :hover               - Invert the gradient effect
+// :active              - Lighten the background color
+//
+// Styleguide 0.0.1.
+.cta-flashy {
+    height: 35px;
+    background-color: $brand-4;
+    @extend %ft-sans;
+    @include line-height( 35 );
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0 20px;
+    border: solid 1px $brand-4;
+
+    &:hover {
+        background-color: #ff6298;
+    }
+
+    &:active {
+        color: #666;
+    }
+
+  -webkit-transition: all 0.3s ease-out;
+     -moz-transition: all 0.3s ease-out;
+       -o-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+}
+
+
+// The default square call-to-action buttons with dark-gradient
+//
+// :hover               - Invert the gradient effect
+// :active              - Darken the text color
+//
+// Styleguide 0.0.1.
+.btn-action {
+    height: 20px;
+    background-color: rgb(202,202,202);
+    @include filter-gradient(#cacaca, #7d7d7d, vertical);
+    @include background-image(linear-gradient(top,  rgba(202,202,202,1) 0%,rgba(125,125,125,1) 100%));
+    @extend %ft-sans;
+    @include font-size( 12 );
+    @include line-height( 18 );
+    color: #fff;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0 10px;
+    border: solid 1px #666;
+    position: relative;
+
+    &:hover {
+        background-color: #ff6298;
+    }
+
+    &:active {
+        color: #666;
+    }
+
+    &.btn-action-main {
+        @include aqua-gradient;
+    }
+
+  -webkit-transition: all 0.2s ease-out;
+     -moz-transition: all 0.2s ease-out;
+       -o-transition: all 0.2s ease-out;
+          transition: all 0.2s ease-out;
+}
+
+
+// The Login/Signup with Facebook button
+//
+// :hover               - Invert the gradient effect
+// :active              - Darken the text color
+//
+// Styleguide 0.0.1.
+.fb-login {
+    width: 279px;
+    height: 40px;
+    display: inline-block;
+    @include blue-gradient;
+    @extend %ft-sans;
+    color: #fff;
+    @include font-size( 12 );
+    line-height: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0 20px;
+    border: solid 1px #999;
+    position: relative;
+
+    &:hover {
+        @include blue-gradient-invert;
+        color: #fff;
+    }
+
+    &:active {
+        color: #74767b;
+    }
+
+    &:after {
+        width: 40px;
+        height: 40px;
+        content: "\0020";
+        background-image: url(/images/buttons/btn-facebook.png);
+        position: absolute;
+        top: 0;
+        left: 8px;
+        z-index: 9;
+    }
+
+    // Fade the Facebook icon on the active state
+    &:active:after {
+        @include opacity( 0.6 );
+    }
+}
+
+// Overwrite the content hyperlinks color when
+// an hyperlink is used instead of a <button>
+main a.fb-login {
+    color: #fff;
+}
+
+
+// Yellow button with a letter icon used in contact forms
+//
+// :hover               - Invert the gradient effect
+// :active              - Lighten the text color
+//
+// Styleguide 0.0.1.
+.btn-send {
+    height: 28px;
+    background-color: $brand-3;
+    background-image: url(/images/icons/icon-mail.png);
+    background-repeat: no-repeat;
+    background-position: 15px center;
+    @extend %ft-sans;
+    @include line-height( 28 );
+    color: #000;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0 20px 0 45px;
+    border: solid 1px #000;
+
+    &:hover {
+        background-color: #999966;
+    }
+
+    &:active {
+        color: #666;
+    }
+}
+
+
+// Button with a dark background and white edit icon on the left
+//
+// :hover               - Dim the background color a bit
+// :active              - Lighten the text color
+//
+// Styleguide 0.0.1.
+.btn-edit {
+    @extend .cta-primary;
+    background-image: url(/images/icons/icon-btn-edit.png);
+    background-repeat: no-repeat;
+    background-position: 30px center;
+    padding-right: 30px;
+    padding-left: 60px;
+
+    &:hover {
+        color: #fff;
+    }
+}
+
+
+// Generic round close button with an X inside
+//
+// :hover               - none
+//
+// Styleguide 0.0.1.
+.btn-delete,
+.btn-close,
+.btn-close-small {
+    width: 33px;
+    height: 33px;
+    background-color: transparent;
+    background-image: url(/images/buttons/btn-close.png);
+    display: block;
+    @include hide-text;
+}
+
+.btn-close-small {
+    width: 24px;
+    height: 24px;
+    background-image: url(/images/buttons/btn-close-small.png);
+}
+
+
+
+// Grey button with the round corners and remove icon
+// Used in the cart to delete products
+//
+// :hover               - none
+//
+// Styleguide 0.0.1.
+.btn-remove {
+    width: 98px;
+    height: 26px;
+    background-image: url(/images/buttons/btn-remove.png);
+    display: block;
+    @include hide-text;
+}
+
+
+.btn-blog {
+    width: 67px;
+    height: 24px;
+    display: block;
+    background-image: url(/images/buttons/btn-blog.png);
+}
+
+
+// Social Buttons
+.btn-tweet {
+    width: 47px;
+    height: 24px;
+    display: block;
+    float: left;
+    background-image: url(/images/buttons/btn-tweet.png);
+    @include hide-text;
+    margin-right: 8px;
+}
+
+.btn-fblike {
+    width: 51px;
+    height: 24px;
+    display: block;
+    float: left;
+}
+
+.btn-pinit {
+    width: 49px;
+    height: 24px;
+    display: block;
+    float: left;
+    background-image: url(/images/buttons/btn-pinit.png);
+    @include hide-text;
+    margin-right: 8px;
+}
+
+.btn-pinit > a[class^="PIN"] {
+    background-image: none !important;
+}
+
+
+
+// Back To Top button that has a background arrow
+//
+// :hover               - none
+//
+// Styleguide 0.0.1.
+.back-top {
+    background-image: url(/images/icons/icon-arrow-top.png);
+    background-position: left center;
+    color: $text-color;
+    padding-left: 24px;
+}
+
+
+
+// Table
+// -----------------------------------------------------------------------------------
+// Alternative row background-color
+.zebra tr:nth-child( odd ) {
+    background-color: #fafafa;
+}
+
+// Make the thead row standout from the rest
+thead {
+    tr {
+        background-color: $brand-1 !important;
+    }
+
+    th, a, a:hover {
+        color: #fff;
+    }
+}
+
+
+
+
+// Icons
+// -----------------------------------------------------------------------------------
+.icon-add-look      { background-image: url(/images/icons/icon-add-look.png); }
+.icon-add-page      { background-image: url(/images/icons/icon-add-page.png); }
+.icon-arrowPrev     { background-image: url(/images/icons/icon-navArrows.png); }
+.icon-arrowNext     { background-image: url(/images/icons/icon-navArrows.png); }
+.icon-attach        { background-image: url(/images/icons/icon-attach.png); }
+.icon-chat          { background-image: url(/images/icons/icon-chat.png); }
+.icon-controls      { background-image: url(/images/icons/icon-controls.png); }
+.icon-edit-pink     { background-image: url(/images/icons/icon-edit-pink.png); }
+.icon-email         { background-image: url(/images/icons/icon-email.png); }
+.icon-file-uploaded { background-image: url(/images/icons/icon-file-uploaded.png); }
+.icon-flag-aqua     { background-image: url(/images/icons/icon-flag-aqua.png); }
+.icon-gift          { background-image: url(/images/icons/icon-gift.png); }
+.icon-heart         { background-image: url(/images/icons/icon-heart.png); }
+.icon-kr            { background-image: url(/images/icons/icon-kr.png); }
+.icon-lovebubble    { background-image: url(/images/icons/icon-lovebubble.png); }
+.icon-pages         { background-image: url(/images/icons/icon-pages.png); }
+.icon-pdf           { background-image: url(/images/icons/icon-pdf.png); }
+.icon-preview       { background-image: url(/images/icons/icon-preview.png); }
+.icon-publish       { background-image: url(/images/icons/icon-publish.png); }
+.icon-search-dark   { background-image: url(/images/icons/icon-search-dark.png); }
+.icon-shoppingBag   { background-image: url(/images/icons/icon-shoppingbag.png); }
+.icon-toggle        { background-image: url(/images/icons/icon-toggle.png); }
+.icon-tooltip       { background-image: url(/images/icons/icon-tooltip.png); background-position: 0 -65px; }
+.icon-tooltip:hover { background-position: 0 0; }
+.icon-trash         { background-image: url(/images/icons/icon-trash.gif); }
+.icon-trash-aqua    { background-image: url(/images/icons/icon-trash-aqua.png); }
+.icon-trash-big     { background-image: url(/images/icons/icon-trash-big.png); }
+.icon-update        { background-image: url(/images/icons/icon-update.png); }
+.icon-upload        { background-image: url(/images/icons/icon-upload.png); }
+.icon-viewMore      { background-image: url(/images/icons/icon-displayOpts.png); }
+.icon-viewLess      { background-image: url(/images/icons/icon-displayOpts.png); background-position: 0 -9px; }
+.icon-warning       { background-image: url(/images/icons/icon-warning.png); }
+.icon-word          { background-image: url(/images/icons/icon-word.png); }
+
+
+// Badges
+.icon-badgeAqua     { background-image: url(/images/icons/icon-checkBadge-aqua.png); }
+.icon-badgeWhite    { background-image: url(/images/icons/icon-checkBadge-white.png); }
+
+// Social Icons
+.icon-rss           { background-image: url(/images/icons/icon-social.png); background-position: 0 0; }
+.icon-facebook      { background-image: url(/images/icons/icon-social.png); background-position: -26px 0; }
+.icon-twitter       { background-image: url(/images/icons/icon-social.png); background-position: -52px 0; }
+.icon-pinterest     { background-image: url(/images/icons/icon-social.png); background-position: -78px 0; }
+
+
+
+// Opacity
+// -----------------------------------------------------------------------------------
+.alpha-50 { @include opacity ( 0.5 ); }

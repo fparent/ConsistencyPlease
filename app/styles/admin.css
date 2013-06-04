@@ -1,0 +1,48 @@
+
+section .label {
+    font-size: 14pt;
+    font-weight: bold;
+    color: #999999;
+}
+
+section .label+p {
+    font-weight: bold;
+}
+
+.superfaint {
+    color: #cccccc
+}
+
+.grid-33p {
+    width: 30%;
+    float: left;
+    margin-right: 3%;
+}
+
+.grid-33pf {
+    width: 30%;
+    float: left;
+}
+
+.grid-66p {
+    width : 63%;
+    float: left;
+    margin-right: 3%;
+}
+
+.grid-100p {
+    width: 100%;
+    float: left;
+}
+
+.grid-50p {
+    width: 47%;
+    float : left;
+    margin-right: 3%;
+}
+
+table.social-media td:first-child {
+    font-weight: bold;
+    text-align: right;
+    color: #999999;
+}

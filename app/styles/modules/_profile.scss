@@ -1,0 +1,370 @@
+// Shared styles for the user & stylist profiles
+
+
+.profile-info {
+    padding-left: 52px;
+}
+
+// The top section in the profile page is used to display a box with the
+// current state of the profile (complete or not)
+.profile-state {
+    width: 540px;
+    min-height: 125px;
+    @include font-size( 14 );
+    @include line-height( 28 );
+    text-align: center;
+    padding: 25px 40px;
+    margin-bottom: 50px;
+    position: relative;
+
+    .btn-close {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+    }
+
+    .alpha {
+        color: #fff;
+        margin-bottom: 18px;
+    }
+}
+
+// Profile Complete (the user just finished signing up)
+// -----------------------------------------------------------------------------------
+.profile-complete {
+    .alpha {
+        padding-left: 37px;
+    }
+
+    .aqua-stripes {
+        background-color: #86d7d7;
+    }
+}
+
+
+// Select Stylist (the user's profile was reviewed and we have found matching stylists)
+// -----------------------------------------------------------------------------------
+.prf-select-stylist {
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+    @include clearfix;
+    border: solid 1px #ccc;
+    @include box-shadow( rgba( 230, 228, 228, 0.35 ) 0 0 20px 0 );
+    margin-bottom: 22px;
+    position: relative;
+
+    // Paragraph just after the stylist selection box
+    & + p {
+        margin-bottom: 78px;
+    }
+
+    // Top part of the box with the descriptive message
+    header {
+        height: 60px;
+        @include line-height( 60 );
+        border-bottom: solid 1px #ccc;
+        position: relative;
+        z-index: 3;
+
+        & + .suggested-stylist {
+            border: 0;
+        }
+
+        .confirmation-title {
+            display: none;
+        }
+    }
+
+    // Content part of the stylist selection box
+    .suggested-stylist-wrapper {
+        height: 200px;
+        overflow: hidden;
+        @include light-gradient;
+        position: relative;
+    }
+
+    .suggested-stylist {
+        height: 200px;
+        @include light-gradient;
+        padding: 16px;
+        border-left: solid 1px #ccc;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+
+        &:first-child {
+            border: 0 !important;
+        }
+    }
+
+    .suggested-stylist + .suggested-stylist { left: 33.3%; }
+    .suggested-stylist + .suggested-stylist + .suggested-stylist { left: 66.6%; }
+
+    .stylist-image-medium {
+        margin-right: 14px;
+        @include transition-property( "border" );
+        @include transition-duration( 0.5s );
+        @include transition-timing-function( ease-out );
+    }
+
+    .is-selected .stylist-image-medium {
+        border: solid 3px $brand-3;
+    }
+
+    .select-stylist {
+        height: 23px;
+        @include inline-block;
+        background-image: url(/images/icons/icon-checkBadge-grey.png);
+        background-position: left center;
+        color: $text-weak;
+        @include font-size( 18 );
+        @include line-height( 23 );
+        @extend %ft-sans;
+        font-weight: bold;
+        padding-left: 26px;
+        position: absolute;
+        bottom: 22px;
+        left: 32px;
+
+        &:hover {
+            background-image: url(/images/icons/icon-checkBadge-pink.png);
+            color: $text-color;
+        }
+    }
+
+    // The 2 arrows (Go Back or Confirm this stylist) that appears when the
+    // user clicks on Select this Stylist
+    .confirmation-arrows {
+        width: 614px;
+        height: 35px;
+        display: none;
+        position: absolute;
+        bottom: -200px;
+        left: -143px;
+
+        .arrow-back,
+        .arrow-confirm {
+            width: 286px;
+            height: 35px;
+            float: left;
+            @extend %ft-sans;
+            @include font-size( 14 );
+            @include line-height( 35 );
+            text-transform: none;
+            letter-spacing: 0;
+
+            position: relative;
+        }
+
+        .arrow-back {
+            background-color: #ccc;
+            background-image: url(/images/icons/icon-arrow-back.png);
+            background-position: 15px 10px;
+            background-repeat: no-repeat;
+            padding-left: 30px;
+
+            &:after {
+                width: 0;
+                height: 0;
+                content: "\0020";
+                border-top: 18px solid transparent;
+                border-bottom: 17px solid transparent;
+                border-left: 0;
+                border-right: 14px solid #ccc;
+                position: absolute;
+                top: 0;
+                left: -14px;
+            }
+        }
+
+        .arrow-confirm {
+            background-color: $brand-4;
+            background-image: url(/images/icons/icon-checkBadge-white.png);
+            background-position: 25px 8px;
+            background-repeat: no-repeat;
+            color: #fff;
+            padding-left: 40px;
+
+            &:after {
+                width: 0;
+                height: 0;
+                content: "\0020";
+                border-top: 18px solid transparent;
+                border-bottom: 17px solid transparent;
+                border-right: 0;
+                border-left: 14px solid $brand-4;
+                position: absolute;
+                top: 0;
+                right: -14px;
+            }
+        }
+    }
+}
+
+
+// Profile Confirmation
+// -----------------------------------------------------------------------------------
+.prf-confirmation {
+    width: 100%;
+    height: 78px;
+    @include line-height( 34 );
+    text-align: center;
+    border: solid 1px #ccc;
+    @include box-shadow( rgba( 230, 228, 228, 0.35 ) 0 0 20px 0 );
+    margin-bottom: 40px;
+}
+
+
+
+// Header area of the content section containing the name & city, and control buttons
+.prf-header {
+    height: 65px;
+    border-bottom: solid 1px $text-weak;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+// User profile picture in the left column
+.user-profile-img {
+    margin-bottom: 32px;
+}
+
+.prf-selected-stylist {
+    width: 150px;
+    color: $brand-4;
+    margin-left: 15px;
+
+    .icon-email {
+        width: 16px;
+        height: 11px;
+        display: block;
+        margin-top: 8px
+    }
+}
+
+.prf-info-group {
+    margin-bottom: 50px;
+    @include clearfix;
+
+    h6, p {
+        margin-bottom: 18px;
+    }
+
+    // Spacing between the questions and answers
+    .prf-info-title {
+        @extend .alt-text;
+        color: $text-weak;
+        margin-right: 4px;
+    }
+}
+
+.icon-sizes,
+.icon-heels {
+    background-image: url(/images/pages/user/profile/icon-sizes.png);
+    padding-left: 40px;
+}
+
+.icon-sizes {
+    @include inline-block;
+}
+
+.icon-heels {
+    display: block;
+    color: $text-weak;
+    position: relative;
+
+    &.is-selected {
+        color: $text-color;
+
+        &:after {
+            width: 23px;
+            height: 23px;
+            content: "\0020";
+            background-image: url(/images/icons/icon-checkBadge-pink.png);
+            position: absolute;
+            top: 0;
+            left: 170px;
+        }
+    }
+}
+
+.heels-flat    { background-position: 0 0; }
+.heels-high    { background-position: 0 -76px; }
+.heels-low     { background-position: 0 -152px; }
+.heels-medium  { background-position: 0 -228px; }
+.sizes-bras    { background-position: 0 -304px; }
+.sizes-dress   { background-position: 0 -380px; }
+.sizes-pants   { background-position: 0 -456px; }
+.sizes-shoes   { background-position: 0 -532px; }
+.sizes-tops    { background-position: 0 -608px; }
+
+
+// Budget Preferences Categories
+.prf-budget-cat {
+    min-height: 35px;
+    @include clearfix;
+    margin-bottom: 18px;
+
+    .prf-budget-title {
+        width: 64px;
+        float: left;
+        @include font-size( 12 );
+        @extend %ft-sans;
+        text-transform: uppercase;
+        text-align: right;
+        margin-right: 28px;
+
+        strong {
+            @include font-size( 18 );
+            font-weight: bold;
+        }
+    }
+
+    .left {
+        width: 500px;
+    }
+}
+
+.prf-budget-icon {
+    width: 127px;
+    height: 35px;
+    @include inline-block;
+    background-image: url(/images/pages/user/profile/icon-budget.png);
+    color: $text-faint;
+    @include font-size( 12 );
+    @extend %ft-sans;
+    text-transform: uppercase;
+    padding-top: 8px;
+    padding-left: 46px;
+    border: solid 1px $text-weak;
+    margin-right: 4px;
+    margin-bottom: 4px;
+}
+
+.budget-accessories    { background-position: 0 0; }
+.budget-bags           { background-position: 0 -135px; }
+.budget-dress          { background-position: 0 -270px; }
+.budget-pants          { background-position: 0 -405px; }
+.budget-shoes          { background-position: 0 -540px; }
+.budget-skirt          { background-position: 0 -675px; }
+.budget-tops           { background-position: 0 -810px; }
+
+// Profile Pictures
+.prf-alt-img {
+    @include inline-block;
+    margin-left: 10px;
+
+    h6 + & {
+        margin: 0;
+    }
+}
+
+
+.prf-footer {
+    height: 65px;
+    border-top: solid 1px $text-weak;
+    position: relative;
+}

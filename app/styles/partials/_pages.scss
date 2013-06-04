@@ -1,0 +1,74 @@
+//************************************************************************************
+// PAGES
+// Common styles shared by multiple pages
+//************************************************************************************
+
+
+// Client & Stylist stories
+// -----------------------------------------------------------------------------------
+.stylist-stories,
+.client-stories {
+    .user-type {
+        min-height: 270px;
+        margin-bottom: 55px;
+
+        a {
+            display: block;
+            position: relative;
+            z-index: 2;
+        }
+    }
+
+    .small {
+        @include font-size( 28 );
+    }
+
+    a.left, img.left {
+        margin-right: 66px;
+    }
+
+    a.right, img.right {
+        margin-left: 30px;
+    }
+
+    .user-desc {
+        width: 420px;
+    }
+
+    .user-name {
+        color: $brand-4;
+        font-weight: bold;
+    }
+
+    .user-experience {
+        color: $text-dim;
+    }
+
+    .user-experience,
+    .user-link {
+        font-weight: 300;
+        font-style: italic;
+    }
+
+    .cta-flashy {
+        margin-top: 65px;
+    }
+}
+
+.client-stories {
+    .user-type {
+        background-image: url(/images/pink-dotted-border.png);
+        background-position: left 18px;
+    }
+
+    .user-type:nth-child( even ) {
+        background-position: 300px 18px;
+        padding-left: 0;
+    }
+
+    h2 {
+        background-color: #fff;
+        @include inline-block;
+        padding: 0 16px;
+    }
+}

@@ -1,0 +1,371 @@
+// -----------------------------------------------------------------------------------
+// CREATE LOOKS > SELECTED PRODUCT (LEFT COLUMN)
+// -----------------------------------------------------------------------------------
+#tearsheets {
+    // Spacing between the left and right columns
+    .trs-left-col {
+        //width: 476px;
+        width: 320px;
+        float: left;
+        //position: fixed;
+        margin-right: 16px;
+
+        .padding {
+            height: 100px;
+        }
+    }
+
+    .trs-right-col {
+        //width: 492px;
+        width: 560px;
+        float: right;
+        padding-left: 16px;
+    }
+
+    .tsheets-title {
+        margin: 0 0 30px;
+
+        h1 {
+            text-align: left;
+            margin-bottom: 5px;
+        }
+    }
+
+    .tab-panel {
+        min-height: 550px;
+        padding-bottom: 0;
+
+        .loading-wrapper {
+            padding-top: 50px;
+        }
+
+        .catalog-nav {
+            padding: 0 100px;
+        }
+    }
+}
+
+.helper-arrow {
+    position: absolute;
+    top: 126px;
+    right: -89px;
+    z-index: 0;
+}
+
+
+#look-creation {
+    .selected-product {
+        margin-bottom: 42px;
+    }
+
+    .txtbox-full {
+        position: relative;
+        z-index: 1;
+    }
+
+    // The dashed boxes indicating where the user can drop
+    // the dragged product
+    .product-dropbox {
+        width: 110px;
+        height: 160px;
+        float: left;
+        color: #bce6e6;
+        @include font-size( 72 );
+        @include line-height( 135 );
+        text-align: center;
+        border: dashed 1px #9f9fb2;
+        margin-bottom: 58px;
+        margin-left: 10px;
+        position: relative;
+
+        &.is-available {
+            background-color : #e0f5f5;
+            color : #66cccc;
+        }
+
+        /*
+        &:nth-child(  4n + 1 ) {
+            margin-left: 0;
+        }*/
+
+        &:nth-child(  2n + 1 ) {
+            margin-left: 0;
+        }
+
+        &:after {
+            width: 100%;
+            height: 20px;
+            color: $brand-6;
+            @extend %ft-sans;
+            @include font-size( 10 );
+            font-style: normal;
+            font-weight: normal;
+            content: "Drag & Drop";
+            text-align: center;
+            text-transform: uppercase;
+            position: absolute;
+            bottom: 65px;
+            left: 0;
+        }
+
+        .btn-close-small {
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            z-index: 11;
+        }
+
+        .thumb {
+            background-color: #fff;
+            overflow: hidden;
+            z-index: 9;
+        }
+
+        // Style when a dropbox is filed with a product
+        &.is-filled {
+            border: solid 1px #ccc;
+        }
+
+        // The color selection dropdown list
+        .tsheets-color-list {
+            width: 100%;
+            height: 20px;
+            display: none;
+            @include font-size( 12 );
+            position: absolute;
+            top: 170px;
+            left: 0;
+        }
+    }
+
+    // The optional dropboxes on the second row
+    .is-faded {
+        color: #e8f7f7;
+        border: dashed 1px #c3e7e7;
+
+        &:after {
+            color: #b2e5e5;
+        }
+    }
+
+
+    .tsheets-nbProduct {
+        margin-right: 14px;
+
+        &:after {
+            content: "|";
+            padding-left: 14px;
+        }
+    }
+
+    // Make the Start Over and Save buttons the same width
+    .cta-secondary,
+    .cta-primary {
+        min-width: 118px;
+    }
+
+    .cta-primary {
+        margin-left: 2px;
+    }
+}
+
+
+// -----------------------------------------------------------------------------------
+// CREATE LOOKS > CATALOG TAB (RIGHT COLUMN)
+// -----------------------------------------------------------------------------------
+.catalog-control {
+    height: 70px;
+    padding: 0;
+
+    // Each individual row of filtering/sorting options
+    .control-field {
+        margin-bottom: 8px;
+    }
+
+    // First row with the View All dropdown list
+    .no-label {
+        margin-bottom: 15px;
+        margin-left: 53px;
+    }
+
+    .filter-brand,
+    .catalog-sortBy {
+        width: 132px;
+    }
+
+    .filter-size {
+        width: 70px;
+    }
+
+    .filter-colors {
+        width: 88px;
+    }
+
+    .clear-all {
+        margin-right: 0;
+        margin-left: 10px;
+    }
+
+    .lbl-sortBy {
+        margin-right: 5px;
+        margin-left: 8px;
+    }
+}
+
+.catalog-list,
+.lightbox-product {
+    // Overwrite the masonry overflow attribute
+    margin-bottom: 24px;
+    overflow: visible !important;
+    position: relative;
+
+    .thumb {
+        width: 80px;
+        height: 190px;
+        display: block;
+        background-color: #fff;
+        color: $text-color;
+        text-align: center;
+        margin-left: 6px;
+        margin-bottom: 20px;
+        position: relative;
+
+        /*
+        &:nth-child(  5n + 1 ) {
+            margin-left: 0;
+        }
+        */
+
+       &:nth-child(  6n + 1 ) {
+            margin-left: 0;
+        }
+    }
+
+    .prd-thumb-img {
+        display: block;
+        margin-bottom: 12px;
+    }
+
+    .prd-thumb-name,
+    .prd-thumb-colors {
+        height: 14px;
+        overflow: hidden;
+        @include font-size( 10 );
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        margin-bottom: 4px;
+    }
+
+    .prd-thumb-price {
+        &:before {
+            content: "$";
+        }
+
+        &.product-rebate {
+            color: $brand-7;
+        }
+
+        .sale {
+            @include font-size( 10 );
+        }
+    }
+}
+
+
+// -----------------------------------------------------------------------------------
+// CREATE LOOKS > DRAGGABLE PRODUCTS
+// -----------------------------------------------------------------------------------
+.ui-draggable-dragging {
+    overflow: hidden;
+    border: solid 1px #ccc;
+    z-index: 9999;
+}
+
+
+#product-overview {
+    background-color: #fff;
+    border: solid 1px #ebebeb;
+    position: absolute;
+    z-index: 11;
+
+    @include box-shadow( 0 0 10px rgba( 108, 108, 108, 0.33 ) );
+
+    .catalog-product {
+        color: $text-color;
+
+        &:hover .product-image {
+            border: solid 1px #fff;
+        }
+    }
+}
+
+
+// -----------------------------------------------------------------------------------
+// CREATE LOOKS > SAVED LOOKS
+// -----------------------------------------------------------------------------------
+.saved-look {
+    width: 120px;
+    overflow: hidden;
+    float: left;
+    @extend %ft-sans;
+    text-align: center;
+    margin: 0 5px;
+    position: relative;
+
+    .look-products {
+        width: 120px;
+        height: 160px !important;
+        display: block;
+        overflow: hidden;
+        padding-left: 0;
+        margin-left: 0;
+        position: relative;
+    }
+
+    .skim-img {
+        float: left;
+    }
+
+    .look-description {
+        padding: 0 8px;
+    }
+
+    .look-title {
+        @include font-size( 18 );
+        font-weight: bold;
+        margin-bottom: 4px;
+    }
+
+    .look-control,
+    .look-date {
+        @include font-size( 10 );
+        text-transform: uppercase;
+
+        a {
+            color: $text-faint;
+            @include font-size( 10 );
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        .is-active {
+            color: $brand-6;
+        }
+    }
+
+    // Dropdown that allow to select a look
+    // in order to display it on the public profile
+    .input-select {
+        width: 106px;
+        height: 20px;
+        @include dark-gradient;
+        @include font-size( 12 );
+        @include line-height( 18 );
+        color: #fff;
+        @extend %ft-sans;
+        text-align: left;
+        text-transform: uppercase;
+        padding: 0 0 0 8px;
+        margin: 10px 0 0 0;
+    }
+}

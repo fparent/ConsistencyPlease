@@ -1,0 +1,112 @@
+//************************************************************************************
+// BASE
+// html, body & default styles
+//************************************************************************************
+
+html {
+    font: 300 100% 'Lato', sans-serif;
+    color: $text-color;
+}
+
+
+body {
+    @include font-size( 14 );
+    @include line-height( 18 );
+}
+
+
+
+// Hyperlinks
+// -----------------------------------------------------------------------------------
+//
+// Default hyperlinks style
+//
+// default              - The default hyperlink color is black
+// .content a           - Hyperlinks in the content area of the page are pink
+// :hover               - Subtle hover highlight.
+// .dotted              - Generic hyperlinks within the content of the page
+// .arrow-right         - Adds a ">" after the hyperlink
+//
+// Styleguide 0.0.1.
+a {
+    color: $brand-4;
+    text-decoration: none;
+
+    &:hover {
+        color: #333;
+    }
+
+    &.dotted {
+        @include inline-block;
+        border-bottom: dotted 1px #000;
+    }
+
+    &.arrow-right:after {
+        content: ">";
+        margin-left: 8px;
+    }
+
+    &.full {
+        display: block;
+    }
+}
+
+
+
+// Content and Numbered Lists
+// -----------------------------------------------------------------------------------
+.badge-pink {
+    list-style-type: none;
+
+    .content & {
+        margin-left: 0;
+    }
+
+    li {
+        min-height: 23px;
+        background-image: url(/images/lists/badge-pink.png);
+        background-position: left top;
+        padding-left: 35px;
+        margin-bottom: 16px;
+    }
+}
+
+
+
+// Definition lists
+// -----------------------------------------------------------------------------------
+dt, dd {
+    display: inline-block;
+}
+
+
+
+
+// Paragraphs
+// -----------------------------------------------------------------------------------
+p, article, dl {
+    @include line-height( 18 );
+}
+
+
+
+// Separators
+// -----------------------------------------------------------------------------------
+.content hr {
+    border-bottom: solid 1px #cccccc;
+    position: relative;
+}
+
+.word-separator-light,
+.word-separator-dark {
+    background-repeat: repeat-x;
+    background-position: center center;
+    text-align: center;
+}
+
+.word-separator-light { background-image: url(/images/word-separator-light.gif); }
+.word-separator-dark { background-image: url(/images/word-separator-dark.png); }
+
+.separator {
+    margin-bottom: 60px;
+}

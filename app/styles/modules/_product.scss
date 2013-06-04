@@ -1,0 +1,197 @@
+// -----------------------------------------------------------------------------------
+// PRODUCT DETAIL
+// -----------------------------------------------------------------------------------
+.product-detail {
+    padding: 26px 37px;
+
+    .pd-preview {
+        width: 290px;
+        height: 596px;
+        overflow: hidden;
+    }
+
+    .pd-actions {
+        width: 269px;
+        height: 596px;
+        padding: 0 48px 0 34px;
+        position: relative;
+
+        .item-name,
+        .item-model,
+        .item-size,
+        .item-color,
+        .item-price {
+            font-style: italic;
+        }
+
+        .item-name,
+        .item-model,
+        .item-size {
+            margin-bottom: 4px;
+        }
+
+        .item-name {
+            @include font-size( 18 );
+        }
+
+        .item-color-option {
+            @include inline-block;
+            color: $text-faint;
+            @include font-size( 14 );
+            margin-right: 3px;
+            cursor: pointer;
+        }
+
+        .is-selected {
+            color: $brand-4;
+        }
+
+        .item-size a:hover,
+        .item-color a:hover,
+        .is-active {
+            color: $brand-4;
+        }
+
+        .item-color-list {
+            @include inline-block;
+        }
+
+        .item-color {
+            margin-bottom: 22px;
+        }
+
+        .item-price {
+            margin-bottom: 16px;
+        }
+
+        // When a product is on sale, display the original
+        // price with a small font-size and faint color
+        .original-price {
+            @include inline-block;
+            margin-right: 8px;
+        }
+
+        // The regular price or the one after rebate
+        .current-price {
+            @include inline-block;
+            @include font-size( 18 );
+            margin-right: 6px;
+        }
+
+        .rebate {
+            @include font-size( 10 );
+            @extend %ft-sans;
+            color: $brand-7;
+            font-style: normal;
+        }
+
+        // Section with the shipping information
+        .item-shipping {
+            @include font-size( 10 );
+            margin-bottom: 25px;
+        }
+
+        // The Free Shipping tag
+        .free-shipping {
+            height: 18px;
+            @include inline-block;
+            color: $brand-6;
+            padding: 0 4px;
+            border: solid 1px $brand-6;
+            margin-bottom: 20px;
+        }
+
+        .item-shipping p { @include line-height( 14 ); }
+
+        // Make sure all the buttons and link
+        // are the same size in this column
+        .button, .lnk-close {
+            width: 186px;
+        }
+
+        .cta-primary {
+            margin-bottom: 2px;
+        }
+
+        .btn-lightbox {
+            margin-bottom: 30px;
+        }
+
+        .lnk-close {
+            @include font-size( 10 );
+            display: block;
+        }
+
+        // Product Image gallery
+        .pd-gallery {
+            width: 186px;
+            min-height: 57px;
+            overflow: hidden;
+            position: absolute;
+            bottom: 0;
+            left: 34px;
+        }
+
+        // Thumbnails for the gallery
+        .pd-thumb {
+            width: 35px;
+            height: 57px;
+            float: left;
+            border-bottom: solid 5px #fff;
+            margin-left: 2px;
+
+            &.is-active {
+                border-bottom: solid 5px $brand-6;
+            }
+
+            &:first-child {
+                margin: 0;
+            }
+        }
+    }
+
+    .pd-description {
+        width: 320px;
+        height: 596px;
+        overflow: hidden;
+    }
+
+
+    // Tabs
+    // -----------------------------------------------------------------------------------
+    .tab-nav-item {
+        height: 34px;
+        color: $text-color;
+        float: left;
+        @include font-size( 10 );
+        @include line-height( 34 );
+        border: solid 1px #666;
+        padding: 0 16px;
+        margin: 0;
+        position: relative;
+        z-index: 2;
+
+        &:first-child {
+            padding: 0 16px;
+            border-right: solid 1px #666;
+            margin-right: 0;
+        }
+
+        &.is-active {
+            border-bottom: solid 1px #fff;
+        }
+
+        + .tab-nav-item {
+            border-left: 0;
+        }
+    }
+
+    .tab-panel {
+        height: 563px;
+        padding: 28px 16px;
+        border: solid 1px #666;
+        margin-top: -1px;
+        position: relative;
+        z-index: 1;
+    }
+}

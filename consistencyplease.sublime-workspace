@@ -1,0 +1,533 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"international",
+				"International-district"
+			],
+			[
+				"left",
+				"left-menu"
+			],
+			[
+				"ine",
+				"inline-block"
+			],
+			[
+				"show",
+				"showLightbox"
+			],
+			[
+				"text-",
+				"text-transform"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app/index.html",
+			"settings":
+			{
+				"buffer_size": 2092,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/styles/main.scss",
+			"settings":
+			{
+				"buffer_size": 1180,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 110.0,
+		"selected_items":
+		[
+			[
+				"browser",
+				"File: Open In Browser - Production Server"
+			]
+		],
+		"width": 498.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/F/Dropbox/Private/Projects/ConsistencyPlease/app/styles/main.scss",
+		"/C/Users/FrankStar/Desktop/Gestionnaire des Réclamations",
+		"/F/Dropbox/Private/Projects/ConsistencyPlease/karma.conf.js",
+		"/F/Documents/CCG/praised army of a broken one",
+		"/F/Documents/CCG/royal pain in the assassin deck",
+		"/F/Documents/CCG/tappedout-formatting",
+		"/F/Documents/Wizards forum/abugames cart",
+		"/F/Documents/Wizards forum/tappedout-formatting",
+		"/F/Documents/Wizards forum/praised army of a broken one",
+		"/F/Documents/Wizards forum/royal pain in the assassin deck",
+		"/C/Users/FrankStar/Documents/interview",
+		"/F/wamp/www/Simplissimmo/includes/header.php",
+		"/F/wamp/www/Simplissimmo/includes/database.inc",
+		"/F/My Projects/Simplissimmo/backup/Simplissimmo old/includes/database.inc",
+		"/F/wamp/www/Simplissimmo/js/main.js",
+		"/F/wamp/www/Simplissimmo/js/main.min.js",
+		"/F/wamp/www/Simplissimmo/css/main.min.css",
+		"/F/wamp/www/Simplissimmo/includes/searchfooter/loft.php",
+		"/F/wamp/www/Simplissimmo/press-kit.php",
+		"/F/wamp/www/Simplissimmo/avantages.php",
+		"/F/wamp/www/Simplissimmo/css/main.css",
+		"/F/wamp/www/Simplissimmo/centreville.php",
+		"/F/wamp/www/Simplissimmo/ask-for-a-price.php",
+		"/F/wamp/www/Simplissimmo/booking-request.php",
+		"/F/wamp/www/Simplissimmo/contact-us.php",
+		"/F/wamp/www/Simplissimmo/personalized-form.php",
+		"/F/wamp/www/Simplissimmo/includes/searchinclude/special_fr.tpl",
+		"/F/My Projects/Simplissimmo/backup/Simplissimmo old/css/center_content.css",
+		"/F/My Projects/Simplissimmo/backup/Simplissimmo old/css/base.css",
+		"/F/My Projects/Simplissimmo/backup/Simplissimmo old/css/Style_Global_V3.css",
+		"/F/My Projects/Simplissimmo/backup/Simplissimmo old/css/style_general.css",
+		"/F/My Projects/Simplissimmo/backup/Simplissimmo old/ask-for-a-price.php",
+		"/F/My Projects/Simplissimmo/backup/Simplissimmo old/css/main.min.css",
+		"/F/wamp/www/Simplissimmo/includes/master-top.tmpl.php",
+		"/F/wamp/www/Simplissimmo/immediate-call-back-request.php",
+		"/F/wamp/www/Simplissimmo/includes/footer_fr.php",
+		"/F/wamp/www/Simplissimmo/includes/modules/downtown-district-en.php",
+		"/F/wamp/www/Simplissimmo/why-choose-us.php",
+		"/F/wamp/www/Simplissimmo/features.php",
+		"/F/wamp/www/Simplissimmo/aboutus.php",
+		"/F/wamp/www/Simplissimmo/how-to-rent.php",
+		"/F/wamp/www/Simplissimmo/temporary-assignments.php",
+		"/F/wamp/www/Simplissimmo/film-industry-workers.php",
+		"/F/wamp/www/Simplissimmo/home-insurance-claims.php",
+		"/F/wamp/www/Simplissimmo/locate-all-appartments.php",
+		"/F/wamp/www/Simplissimmo/employee-relocation.php",
+		"/F/wamp/www/Simplissimmo/living-solutions.php",
+		"/F/wamp/www/Simplissimmo/services-included.php",
+		"/F/wamp/www/Simplissimmo/includes/searchfooter/nouveau.php",
+		"/F/wamp/www/Simplissimmo/includes/searchfooter/special.php",
+		"/F/wamp/www/Simplissimmo/includes/searchfooter/pmr.php",
+		"/F/wamp/www/Simplissimmo/includes/searchfooter/vm.php",
+		"/F/wamp/www/Simplissimmo/includes/searchfooter/qi.php",
+		"/F/wamp/www/Simplissimmo/includes/searchfooter/cv.php",
+		"/F/wamp/www/Simplissimmo/includes/searchfooter/2chambre.php",
+		"/F/wamp/www/Simplissimmo/includes/searchfooter/1chambre.php",
+		"/F/wamp/www/Simplissimmo/ville-montreal.php",
+		"/F/wamp/www/Simplissimmo/pourquoi-nous-choisir.php",
+		"/F/wamp/www/Simplissimmo/kit-presse.php",
+		"/F/wamp/www/Simplissimmo/caracteristiques.php",
+		"/F/wamp/www/Simplissimmo/compagnie.php",
+		"/F/wamp/www/Simplissimmo/comment-reserver.php",
+		"/F/wamp/www/Simplissimmo/location-temporaire.php",
+		"/F/wamp/www/Simplissimmo/industrie-du-film.php",
+		"/F/wamp/www/Simplissimmo/sinistre.php",
+		"/F/wamp/www/Simplissimmo/deplacement-professionels.php",
+		"/F/wamp/www/Simplissimmo/services-inclus.php",
+		"/F/wamp/www/Simplissimmo/includes/modules/downtown-district-fr.php",
+		"/F/wamp/www/Simplissimmo/includes/modules/features-en.php",
+		"/F/wamp/www/Simplissimmo/includes/modules/features-fr.php",
+		"/F/wamp/www/Simplissimmo/includes/modules/furnished-apartments-en.php",
+		"/F/wamp/www/Simplissimmo/includes/modules/furnished-apartments-fr.php",
+		"/F/wamp/www/Simplissimmo/includes/modules/international-district-en.php",
+		"/F/wamp/www/Simplissimmo/includes/modules/international-district-fr.php",
+		"/F/wamp/www/Simplissimmo/includes/modules/learn-more-en.php",
+		"/F/wamp/www/Simplissimmo/includes/modules/learn-more-fr.php",
+		"/F/wamp/www/Simplissimmo/includes/modules/lofts-studios-en.php",
+		"/F/wamp/www/Simplissimmo/includes/modules/lofts-studios-fr.php",
+		"/F/wamp/www/Simplissimmo/includes/modules/new-flats-en.php",
+		"/F/wamp/www/Simplissimmo/includes/modules/new-flats-fr.php",
+		"/F/wamp/www/Simplissimmo/includes/modules/old-montreal-en.php",
+		"/F/wamp/www/Simplissimmo/includes/modules/old-montreal-fr.php",
+		"/F/wamp/www/Simplissimmo/includes/modules/one-bedroom-en.php",
+		"/F/wamp/www/Simplissimmo/includes/modules/one-bedroom-fr.php",
+		"/F/wamp/www/Simplissimmo/includes/modules/our-clients-en.php",
+		"/F/wamp/www/Simplissimmo/includes/modules/our-clients-fr.php",
+		"/F/wamp/www/Simplissimmo/includes/modules/owner-benefits-en.php",
+		"/F/wamp/www/Simplissimmo/includes/modules/owner-benefits-fr.php",
+		"/F/wamp/www/Simplissimmo/includes/modules/plateau-en.php",
+		"/F/wamp/www/Simplissimmo/includes/modules/plateau-fr.php",
+		"/F/wamp/www/Simplissimmo/includes/modules/special-offers-en.php",
+		"/F/wamp/www/Simplissimmo/includes/modules/special-offers-fr.php",
+		"/F/wamp/www/Simplissimmo/includes/modules/tour-montreal-en.php",
+		"/F/wamp/www/Simplissimmo/includes/modules/tour-montreal-fr.php",
+		"/F/wamp/www/Simplissimmo/includes/modules/two-bedrooms-en.php",
+		"/F/wamp/www/Simplissimmo/includes/modules/two-bedrooms-fr.php",
+		"/F/wamp/www/Simplissimmo/displaylisting.php",
+		"/F/wamp/www/Simplissimmo/css/modules/tabs.css",
+		"/F/wamp/www/Simplissimmo/includes/modules/special-offers.en.php",
+		"/F/My Projects/Simplissimmo/backup/Simplissimmo old/displaylisting.php",
+		"/F/wamp/www/Simplissimmo/includes/home/top-carousel.php",
+		"/F/wamp/www/Simplissimmo/includes/searchinclude/loft_fr.tpl",
+		"/F/wamp/www/Simplissimmo/includes/searchinclude/vm_en.tpl",
+		"/F/wamp/www/Simplissimmo/includes/searchinclude/vm_fr.tpl",
+		"/F/wamp/www/Simplissimmo/includes/searchinclude/tous_en.tpl",
+		"/F/wamp/www/Simplissimmo/includes/searchinclude/special_en.tpl",
+		"/F/wamp/www/Simplissimmo/includes/searchinclude/tous_fr.tpl",
+		"/F/wamp/www/Simplissimmo/includes/searchinclude/qi_fr.tpl",
+		"/F/wamp/www/Simplissimmo/includes/searchinclude/qi_en.tpl",
+		"/F/wamp/www/Simplissimmo/includes/searchinclude/pmr_fr.tpl",
+		"/F/wamp/www/Simplissimmo/includes/searchinclude/pmr_en.tpl",
+		"/F/wamp/www/Simplissimmo/includes/searchinclude/nouveau_en.tpl",
+		"/F/wamp/www/Simplissimmo/includes/searchinclude/nouveau_fr.tpl",
+		"/F/wamp/www/Simplissimmo/includes/searchinclude/loft_en.tpl",
+		"/F/wamp/www/Simplissimmo/includes/searchinclude/cv_fr.tpl",
+		"/F/wamp/www/Simplissimmo/includes/searchinclude/cv_en.tpl",
+		"/F/wamp/www/Simplissimmo/includes/searchinclude/2chambre_fr.tpl",
+		"/F/wamp/www/Simplissimmo/includes/searchinclude/2chambre_en.tpl",
+		"/F/wamp/www/Simplissimmo/includes/searchinclude/1chambre_fr.tpl",
+		"/F/wamp/www/Simplissimmo/includes/searchinclude/1chambre_en.tpl",
+		"/F/wamp/www/Simplissimmo/css/pages/home.css",
+		"/F/wamp/www/Simplissimmo/searchinclude/tous_fr.tpl",
+		"/F/wamp/www/Simplissimmo/downtown-montreal.php",
+		"/F/My Projects/Simplissimmo/backup/Simplissimmo old/downtown-montreal.php",
+		"/F/wamp/www/Simplissimmo/make-a-reservation.php",
+		"/F/wamp/www/Simplissimmo/solutions-hebergement.php",
+		"/F/wamp/www/Simplissimmo/quartier-international.php",
+		"/F/wamp/www/Simplissimmo/international-district.php"
+	],
+	"find":
+	{
+		"height": 44.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"F:\\wamp\\www\\Simplissimmo",
+			"C:\\Users\\FrankStar\\Desktop\\LuxuryRetreats",
+			"F:\\wamp\\www\\SmartUp",
+			"C:\\Users\\FrankStar\\Desktop\\AgenceRiel\\litho",
+			"",
+			"C:\\Users\\FrankStar\\Desktop\\AgenceRiel\\litho-package",
+			"C:\\Users\\FrankStar\\Desktop\\AgenceRiel\\litho-package\\documentation",
+			"F:\\My Projects\\Steve Pilarezik\\themeforest-1680564-backstreet-blog-magazine-theme\\Backstreet"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"x ",
+			"<strong>",
+			"<p>",
+			"[c]",
+			"x ",
+			" ",
+			"padding: 10px 14px;",
+			"0.95",
+			"#e7e7e7",
+			"#f9f9f9",
+			"#ededed",
+			"main-logo",
+			"000",
+			"border: solid 1px #aaa;",
+			"dotted",
+			"border: dotted 2px #666;",
+			"/formulaire-personnalise",
+			"Ce formulaire personnalisé",
+			"FORMULAIRE PROPRIÉTAIRE",
+			"FORMULAIRE PROPRIÉTAIRE ",
+			"jquery.validationEngine.js",
+			"Pour être sûr que vous êtes huma",
+			"font_bookIta div_formulaire_owner",
+			"div_formulaire_owner",
+			"e représente ni un agent immobilie",
+			"Remplissez les champs suivants",
+			"1000",
+			".div_call_back, .div_formulaire_owner",
+			"menu_titre",
+			"foo1",
+			"mais vous vous trouvez à proximité ",
+			"Service Simplissimmo Inc. ne représente ni ",
+			"div_formulaire_owner",
+			"width:1000px;",
+			"div_call_back",
+			"$module",
+			"modules/",
+			"lofts-studios-",
+			"learn-more-",
+			"international-district-",
+			"international-district-en.php",
+			"furnished-apartments-",
+			"features-",
+			"downtown-district-",
+			"$module",
+			"01",
+			"THE SIMPLISSIMMO ADVANTAGE!",
+			"two-bedrooms-",
+			"tour-montreal-",
+			"special-offers-",
+			"plateau-<",
+			"plateau-",
+			"owner-benefits-<",
+			"our-clients-fr.php",
+			"one-bedroom-fr.php",
+			"old-montreal-fr.php",
+			"new-flats-fr.php",
+			"lofts-studios-fr.php",
+			"learn-more-fr.php",
+			"international-district-fr.php",
+			"furnished-apartments-fr.php",
+			"features-fr.php",
+			"downtown-district-en.php",
+			"downtown-district-fr.php",
+			"02",
+			"Appartements, lofts, Pieds-à-terre",
+			"Chez Simplissimmo, nous sommes con",
+			"char",
+			"utf",
+			"Vous cherchez une unité meublée",
+			"louer",
+			"clear",
+			"content",
+			"button_reserv",
+			"walkscore_content",
+			"button_reserv_\n",
+			"OUVREZ LE CENTRE-",
+			"#div_listing1",
+			"#div_listing_content",
+			"div_listing1",
+			"div_listing1 {",
+			"div_listing1",
+			"3480px",
+			"rent-2bedroom-montreal.png",
+			"simplissimmo-lofts.png",
+			"TOUS LES LOFTS ET STUDIOS MEUBLÉS",
+			"appartements/1-chambre",
+			"simplissimmo-lofts.png",
+			"louer-2chambre-montreal.png",
+			"louer-1chambre-montreal.png",
+			"bread_fr",
+			"]-->\n",
+			"#description_slideshow li",
+			"#div_listing_content",
+			"type=\"text/javascript\" ",
+			"slideshow",
+			"Que ce soit pour affaires ou pour le tourisme",
+			"foo0",
+			"$('#foo0')",
+			"bottom:440px",
+			"bottom:440px;",
+			"Chez Simplissimmo, nous sommes conscients",
+			"Guillemets_page_presentation",
+			"padding",
+			"height:50px",
+			"margin-bottom:440px;",
+			"reservation/faire-une-demande",
+			"Faire une demande de location meublée",
+			"jquery-ui.datepicker.js",
+			"center_div",
+			"ui.datepicker-fr.js",
+			"center_div",
+			"un conseiller Simplissimmo traitera",
+			"440px",
+			"margin-bottom:440px;",
+			"img {",
+			"foo1",
+			"foo0",
+			" ",
+			"availability.",
+			"furnishing-apartments",
+			"location.",
+			"rent-advantage",
+			"more-info.",
+			"client-companies",
+			"slogan-presskit",
+			"see-services",
+			"downloading-presskit"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			" ",
+			"\"Proxima-SemiBold\"",
+			" <p class=\"link_top breadcrumb\">",
+			"<div id=\"center_div\" class=\"old-markup\">",
+			"\"Proxima\"",
+			"\"Proxima-Italic\"",
+			"\"Proxima\";",
+			"\"Proxima-Bold\"",
+			"Proxima-BoldItalic",
+			"font_bookIta",
+			"\"font_BlackIta\"",
+			"http://agencedianeriel.com/",
+			"\\n",
+			"",
+			"http://www.stevepilarezik.com",
+			"http://www.stevepilarezik.com/www",
+			"http://www.stevepilarezik.com/www/wp-content/",
+			"http://www.stevepilarezik.com"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": false,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/index.html",
+					"settings":
+					{
+						"buffer_size": 2092,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								770,
+								770
+							]
+						],
+						"settings":
+						{
+							"ensure_newline_at_eof_on_save": true,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/styles/main.scss",
+					"settings":
+					{
+						"buffer_size": 1180,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1180,
+								1180
+							]
+						],
+						"settings":
+						{
+							"ensure_newline_at_eof_on_save": true,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 37.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 370.0
+	},
+	"output.sftp":
+	{
+		"height": 98.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/F/My Projects/DreamShop Coaching/dreamshop-coaching.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 285.0,
+	"status_bar_visible": true
+}

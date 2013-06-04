@@ -1,0 +1,407 @@
+// -----------------------------------------------------------------------------------
+// CHECKOUT > CART
+// -----------------------------------------------------------------------------------
+.checkout-title {
+    margin-bottom: 40px;
+}
+
+.cart-table {
+    border: solid 1px #ccc;
+    margin-bottom: 30px;
+}
+
+.cart-item {
+    border-top: solid 1px #ccc;
+
+    &:first-child {
+        border: 0;
+    }
+
+    // Common table cell style
+    td {
+        padding: 15px 0;
+    }
+
+    // First cell: cart product image
+    .cart-item-img {
+        width: 120px;
+        padding-left: 15px;
+    }
+
+    // Second cell: cart product description,
+    // including the shipping information and return
+    // policies
+    .cart-item-desc {
+        width: 468px;
+        padding-left: 25px;
+        padding-right: 12px;
+    }
+
+    // Top part of the product's description, containing the
+    // name, color, etc.
+    .cart-item-info {
+        @include line-height( 22 );
+        font-style: italic;
+        margin-bottom: 25px;
+    }
+
+    // Shipping information part of the the product's description
+    // cell.
+    .cart-item-shipping {
+        @include font-size( 12 );
+    }
+
+    // Highlight the company shipping the product and link
+    // to their return policies.
+    b {
+        color: $brand-4;
+        @extend %ft-sans;
+        text-transform: uppercase;
+    }
+
+    // The third cell containing the product's individual price.
+    .cart-item-price {
+        width: 120px;
+        @extend %ft-sans;
+        padding-top: 62px;
+        padding-right: 12px;
+
+        // Spacing between the cell's title and price
+        .alt-text {
+            margin-bottom: 24px;
+        }
+    }
+
+    // Fourth cell with the product's quantity and update button
+    .cart-item-qty {
+        width: 120px;
+        padding-top: 62px;
+        padding-right: 12px;
+
+        // Spacing between the cell's title and price
+        .alt-text {
+            margin-bottom: 12px;
+        }
+
+        // Number input to adjust the number of items
+        .cart-input-qty {
+            width: 54px;
+            height: 36px;
+            @include font-size( 14 );
+            font-weight: bold;
+            text-align: center !important; // overwrite the polyfill style
+            border: solid 1px #1e1e1e;
+        }
+
+        // The update button
+        .icon-update {
+            color: $brand-4;
+            display: block;
+            @include font-size( 12 );
+            background-position: left center;
+            background-repeat: no-repeat;
+            padding-left: 20px;
+            margin-top: 18px;
+        }
+    }
+
+    // Last cell containing the subtotal based on the
+    // item price and qty selected
+    .cart-item-subttl {
+        width: 108px;
+        @extend %ft-sans;
+        padding-top: 62px;
+        padding-right: 15px;
+
+        // Spacing between the cell's title and price
+        .alt-text {
+            margin-bottom: 25px;
+        }
+
+        .btn-remove {
+            margin-top: 18px;
+        }
+    }
+}
+
+// The Continue Shopping link under the cart table
+.btn-continue {
+    color: $text-faint;
+    @include font-size( 12 );
+    margin-right: 28px;
+
+    &:before {
+        content: "<";
+        padding-right: 8px;
+    }
+}
+
+// The info zone under the cart table with the help link,
+// shipping info and taxes description
+.checkout-info {
+    .icon-checkout {
+        height: 16px;
+        background-image: url(/images/pages/checkout/icon-checkout.png);
+        background-position: left center;
+        @include inline-block;
+        @include font-size( 12 );
+        color: $text-faint;
+        @extend %ft-sans;
+        text-transform: uppercase;
+        padding-left: 30px;
+        margin-right: 35px;
+
+        @include transition-property( color );
+        @include transition-duration( 0.1s );
+        @include transition-timing-function( ease-out );
+
+        &:hover {
+            color: $brand-6;
+        }
+    }
+
+    .icon-checkout-help      { background-position: 0 0; }
+    .icon-checkout-shipping  { background-position: 0 -66px; }
+    .icon-checkout-taxes     { background-position: 0 -130px; }
+}
+
+// Container with the cart summary totals including the
+// subtotal, shipping & handling, taxes, order total, etc.
+.checkout-totals {
+    @extend %ft-sans;
+    font-weight: bold;
+    text-align: right;
+    text-transform: uppercase;
+    margin-bottom: 36px;
+
+    .checkout-totals-titles {
+        width: 176px;
+        margin-right: 6px;
+    }
+
+    .checkout-totals-amounts {
+        width: 170px;
+        padding-right: 56px;
+    }
+
+    .alt-text {
+        color: $brand-4;
+        font-weight: normal;
+    }
+}
+
+
+
+// -----------------------------------------------------------------------------------
+// CHECKOUT > SHIPPING & BILLING
+// -----------------------------------------------------------------------------------
+.checkout-header {
+    .coi {
+        width: 700px;
+    }
+
+    .warning-msg {
+        background-color: #86d7d7;
+        text-align: center;
+        padding: 22px 58px 10px;
+        margin-bottom: 34px;
+    }
+
+    .page-title {
+        margin-bottom: 50px;
+    }
+
+    .same-address {
+        height: 35px;
+        @include line-height( 35 );
+        padding: 0 10px;
+        margin-bottom: 36px;
+
+        .input-checkbox {
+            margin-top: 9px;
+        }
+    }
+}
+
+.checkout-fieldset {
+    margin-bottom: 36px;
+    position: relative;
+
+    label {
+        height: 35px;
+        @include font-size( 12 );
+        @include line-height( 35 );
+        text-align: right;
+    }
+
+    label + input + label {
+        margin-left: 17px;
+    }
+
+    .field-container {
+        label:first-child {
+            width: 110px;
+            float: left;
+            margin-right: 10px;
+        }
+
+        // Style for the custom checkboxes generated by Uniform
+        .input-select {
+            float: left;
+            text-transform: uppercase;
+        }
+
+        .input-select + label {
+            width: auto;
+        }
+    }
+
+    // Strings that are aligned with the inputs instead of being
+    // completely on the left side
+    .no-label {
+        padding-left: 120px;
+    }
+
+    // Adjust the label next to a Uniform checkbox
+    .input-checkbox + label {
+        height: 18px;
+        @include line-height( 20 );
+    }
+
+    // Style the dropdown lists generated by Uniform
+    .input-select {
+        width: 86px;
+        margin-right: 20px;
+    }
+
+    // The white overlay on the billing fieldset
+    // when the checkbox "Same Address" is checked
+    .overlay-white {
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        @include opacity( 0.8 );
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 999;
+    }
+}
+
+
+
+// -----------------------------------------------------------------------------------
+// CHECKOUT > REVIEW ORDER
+// -----------------------------------------------------------------------------------
+.review-address {
+    @include line-height( 24 );
+    padding-left: 122px;
+    margin-bottom: 80px;
+
+    .zeta {
+        margin-bottom: 38px;
+    }
+
+    .icon-edit-pink {
+        height: 16px;
+        @include inline-block;
+        @include line-height( 16 );
+        font-weight: normal;
+        padding-left: 24px;
+        margin-left: 26px;
+    }
+}
+
+
+// The popup containing the informative message regarding the next steps after
+// placing an order
+#chkt-warning-popup {
+    width: 710px;
+    height: 345px;
+    background-color: #fff;
+    padding: 26px 18px 35px 24px;
+
+    .warning-title {
+        color: $brand-6;
+        @include font-size( 30 );
+        margin-bottom: 20px;
+    }
+
+    p {
+        @include font-size( 18 );
+        @include line-height( 28 );
+    }
+
+    .aqua-stripes {
+        height: 35px;
+        @include line-height( 35 );
+        padding: 0 10px;
+    }
+
+    .input-checkbox {
+        margin-top: 8px;
+    }
+}
+
+.chkt-warning-colorbox {
+    #cboxClose {
+        display: none !important;
+    }
+}
+
+
+
+// -----------------------------------------------------------------------------------
+// CHECKOUT > CONFIRMATION
+// -----------------------------------------------------------------------------------
+.checkout-confirmation {
+    width: 952px;
+    height: 498px;
+    background-image: url(/images/pages/checkout/confirmation-bg.jpg);
+    padding-top: 24px;
+
+    .coi {
+        width: 539px;
+        text-align: center;
+        padding: 22px 35px;
+        @include box-shadow( rgba( 153, 153, 153, 0.3 ) 0 0 20px 5px );
+    }
+
+    .aqua-stripes {
+        background-color: #86d7d7;
+    }
+
+    // First paragraph with the congratulation message and
+    // confirmation number
+    .confirmation-title {
+        color: #fff;
+        @extend %ft-sans;
+        @include font-size( 18 );
+        @include line-height( 21 );
+        font-weight: bold;
+        margin-bottom: 34px;
+    }
+
+    .gamma {
+        background-image: url(/images/pages/checkout/icon-confirmation.png);
+        background-position: 0 6px;
+        @include inline-block;
+        padding-left: 24px;
+        margin-bottom: 16px;
+    }
+
+    .icon-checkout-phone {
+        background-position: 0 4px;
+        padding-left: 36px;
+    }
+
+    .icon-checkout-dial {
+        background-position: 0 -175px;
+        padding-left: 44px;
+    }
+
+    .spacer {
+        width: 280px;
+        margin: 34px auto 22px;
+    }
+}

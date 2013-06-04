@@ -1,0 +1,57 @@
+// -----------------------------------------------------------------------------------
+// ADMIN > USERS
+// -----------------------------------------------------------------------------------
+.filter {
+    label {
+        margin-right: 5px;
+    }
+
+    .filter-list {
+        margin-right: 40px;
+    }
+}
+
+.searchbox .loading {
+    margin: 5px 0 0 10px;
+}
+
+
+
+// -----------------------------------------------------------------------------------
+// ADMIN > CATALOG
+// -----------------------------------------------------------------------------------
+#frmAddProduct {
+
+    .btn-upload,
+    .product-color {
+        margin: 0 0 0 10px;
+    }
+
+    .product-color {
+        max-width: 275px;
+        height: 35px;
+        padding: 0 10px;
+    }
+
+    .loading {
+        display: none;
+        padding-top: 4px;
+        margin-left: 10px;
+    }
+}
+
+.product-url {
+    width: 600px;
+    height: 200px;
+    padding: 25px 50px;
+    border: solid 11px #fff;
+}
+
+#upload-img-preview {
+    min-width: 310px;
+    padding: 18px;
+
+    .preview {
+        margin-bottom: 20px;
+    }
+}

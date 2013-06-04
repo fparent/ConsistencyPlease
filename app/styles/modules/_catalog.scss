@@ -1,0 +1,297 @@
+$cat_borders_color: #d8d8d8;
+
+
+// -----------------------------------------------------------------------------------
+// CATALOG > HEADER
+// -----------------------------------------------------------------------------------
+.catalog-header {
+    margin-bottom: 18px;
+}
+
+
+// -----------------------------------------------------------------------------------
+// CATALOG > CATEGORIES SIDEBAR
+// -----------------------------------------------------------------------------------
+.categories {
+    // Align the first category with the "Filter" label in the content
+    padding-top: 6px;
+
+    .cat-item,
+    .subcat-item {
+        @include font-size( 10 );
+        @include line-height( 10 );
+        font-style: italic;
+        text-transform: uppercase;
+        margin-bottom: 14px;
+    }
+
+    // Main category hyperlinks (ie. Denim, Dresses, etc.)
+    .cat-link {
+        color: $text-faint;
+
+        &:hover {
+            color: #000;
+        }
+
+        &.is-active {
+            color: #000;
+            font-weight: bold;
+        }
+    }
+
+
+    // Sub-category hyperlinks (ie. Denim > Boot Cut jeans)
+    .subcat {
+        margin-top: 14px;
+    }
+
+    .subcat-link {
+        overflow: visible;
+        color: #000;
+        text-transform: none;
+        padding-left: 8px;
+        position: relative;
+
+        &:hover,
+        &.is-active {
+            color: $brand-4;
+        }
+
+        &.is-active:before {
+            content: ">";
+            position: absolute;
+            top: 2px;
+            left: 0;
+            z-index: 9;
+        }
+    }
+}
+
+
+// -----------------------------------------------------------------------------------
+// CATALOG > CONTROL (FILTER & SORT BY)
+// -----------------------------------------------------------------------------------
+.catalog-control {
+    height: 42px;
+    padding: 0 15px;
+    border-bottom: solid 1px #666;
+    margin-bottom: 20px;
+
+    label {
+        height: 22px;
+        @include line-height( 22 );
+        margin-right: 15px;
+    }
+
+    select {
+        width: 132px;
+        height: 22px;
+        @include line-height( 22 );
+        margin-left: 8px;
+
+        label + & {
+            margin: 0;
+        }
+    }
+
+    .clear-all {
+        height: 22px;
+        @include line-height( 22 );
+        margin-left: 12px;
+        margin-right: 30px;
+    }
+}
+
+
+// -----------------------------------------------------------------------------------
+// CATALOG > NAVIGATION & DISPLAY OPTIONS
+// -----------------------------------------------------------------------------------
+.catalog-nav {
+    text-align: center;
+    margin-bottom: 14px;
+    position: relative;
+
+    // Numbered navigation links
+    .catalog-nav-link {
+        display: inline-block;
+        color: $text-faint;
+        font-style: italic;
+        margin: 0 3px;
+
+        &:hover,
+        &.is-active {
+            color: $brand-4;
+        }
+    }
+
+    // Navigation arrows on the right side
+    .nav-secondary {
+        height: 18px;
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        .nav-arrow {
+            display: block;
+            float: left;
+        }
+
+        .icon-arrowPrev {
+            margin-right: 8px;
+        }
+    }
+}
+
+// View 40, 40 or 100 items
+.display-options {
+    text-align: center;
+    margin-bottom: 24px;
+
+    .display-opt-link {
+        display: inline-block;
+        color: $text-faint;
+        margin-left: 8px;
+
+        &:hover,
+        &.is-active {
+            color: $brand-4;
+        }
+
+        // Add a dot separator between the options
+        &:before {
+            content: "·";
+            padding-right: 8px;
+        }
+
+        // Reset the first item
+        &:first-child {
+            margin: 0;
+
+            &:before {
+                content: "\0020";
+                padding: 0;
+            }
+        }
+
+        // Add a pipe and some spacing after the last option
+        &.last {
+            margin-right: 14px;
+
+            &:after {
+                content: "|";
+                color: $text-color;
+                padding-left: 14px;
+            }
+        }
+    }
+}
+
+
+// -----------------------------------------------------------------------------------
+// CATALOG > PRODUCT LIST
+// -----------------------------------------------------------------------------------
+.product-list {
+    border-top: solid 1px $cat_borders_color;
+    border-bottom: solid 1px $cat_borders_color;
+    margin-bottom: 26px;
+}
+
+// Individual products in the list
+.catalog-product {
+    width: 207px;
+    height: 395px;
+    overflow: hidden;
+    float: left;
+    color: $text-color;
+    font-style: italic;
+    text-align: center;
+    padding: 4px 2px;
+    border-left: solid 1px $cat_borders_color;
+
+    // Remove the border from the first product of every lines
+    &:nth-child( 4n + 1 ) {
+        border-left: 0;
+    }
+
+    // Add a the top border for every product not on the first line
+    &:nth-child( n + 5 ) {
+        border-top: solid 1px $cat_borders_color;
+    }
+
+    // Spacing between the product image and description
+    .product-image {
+        border: solid 1px #fff;
+        margin-bottom: 18px;
+        position: relative;
+    }
+
+    // When mouseover a product, add a border on the it's image
+    &:hover .product-image {
+        border: solid 1px #666;
+    }
+
+    figure {
+        width: 200px;
+        height: 100%;
+        overflow: hidden;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    // Editor's pick: add a yellow ribbon and yellow border
+    // on mouseover
+    &.is-editorsPick figure:after {
+        @include ribbon( "Editor’s Pick", $brand-3, 198px );
+        left: 1px;
+        bottom: 87px;
+    }
+
+    &.is-editorsPick:hover .product-image {
+        border: solid 1px $brand-3;
+    }
+
+    // Product's text area under the image
+    .product-info {
+        @include line-height( 14 );
+    }
+
+    // Product's name
+    .product-name {
+        @include font-size( 10 );
+        text-transform: uppercase;
+    }
+
+    // Product's model
+    .product-model {
+        @include font-size( 10 );
+    }
+
+    // Product's price
+    .product-price {
+        @include font-size( 12 );
+        @include line-height( 18 );
+    }
+
+    .product-rebate {
+        @include inline-block;
+        @extend %ft-sans;
+        @include font-size( 10 );
+        font-style: normal;
+        color: $brand-7;
+        margin-left: 4px;
+    }
+
+    // Product's color
+    .product-color {
+        @include font-size( 10 );
+        text-transform: lowercase;
+        font-weight: bold;
+    }
+}
+
+
+.catalog-notice {
+    background-position: center top;
+    padding-top: 30px;
+    margin-top: 20px;
+}
