@@ -44,46 +44,6 @@
 }
 
 
-// Archived Lookbook
-// -----------------------------------------------------------------------------------
-// Share style for the active and hover state
-@mixin lookbook-accent() {
-  border-bottom: solid 7px $brand-4;
-
-  &:after {
-    width: 0;
-    height: 0;
-    content: "\0020";
-    border-left: 7px solid transparent;
-    border-right: 7px solid transparent;
-    border-top: 9px solid $brand-4;
-    position: absolute;
-    top: 0;
-    left: 44%;
-  }
-}
-
-
-
-@mixin ribbon( $text, $bgColor, $width: 100% ) {
-  width: $width;
-  height: 20px;
-  background-color: $bgColor;
-  color: #000;
-  content: $text;
-  @extend %ft-sans;
-  font-style: normal;
-  text-align: center;
-  text-transform: uppercase;
-  position: absolute;
-  top: 280px;
-  left: 0;
-  z-index: 2;
-
-  .csstransitions & {
-    @include line-height( 20 );
-  }
-}
 
 
 @mixin triangle( $direction, $size, $color ) {
