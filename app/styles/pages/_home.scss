@@ -1,145 +1,46 @@
 //************************************************************************************
 // Home
 //************************************************************************************
-.stylist-grid {
-    width: 100%;
-    height: 596px;
-    overflow: hidden;
-    margin-bottom: 46px;
-    position: relative;
 
-    .brick {
-        margin-right: 9px;
-        margin-bottom: 10px;
-    }
+/* INTRO
+-------------------------------------------------------------------------------------*/
+[data-name="intro"] {
+  height: auto;
+  background-color: #d6f0f7;
+  background-color: rgba(244,252,255,0.8);
+  padding: 2em 80px;
+  border: dashed 1px #697684;
+  margin: 0 auto 4em;
+  position: relative;
+  @include box-shadow( 0 0 12px 0 rgba( 0, 0, 0, 0.20 ) );
 
-    .brick-edge {
-        margin-right: 0;
-    }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
 
-    .stylist-picture {
-        width: 230px;
-        height: 139px;
-        cursor: pointer;
-        display: block;
-        overflow: hidden;
-        position: relative;
+  li {
+    margin-bottom: 1em;
+  }
 
-        &:hover .stylist-info {
-            bottom: 0;
-        }
-    }
-
-    .stylist-info {
-        width: 100%;
-        height: 47px;
-        color: #fff;
-        font-style: normal;
-        padding: 3px 10px 0;
-        position: absolute;
-        bottom: -47px;
-        left: 0;
-
-        @include transition-property( bottom );
-        @include transition-duration( 0.15s );
-        @include transition-timing-function( ease-out );
-    }
-
-
-    // The aqua signup box mixed with the stylist pictures
-    .signup-box {
-        width: 470px;
-        height: 139px;
-        overflow: hidden;
-        background-color: #85d6d6;
-        @include hatched-aqua;
-        padding: 10px 22px 14px 14px;
-        position: relative;
-        z-index: 9;
-
-        .signup-title {
-            color: white;
-            @include font-size( 36 );
-            @include line-height( 32 );
-            font-weight: 300;
-            font-style: normal;
-            text-align: left;
-            text-transform: uppercase;
-            margin-bottom: 4px;
-        }
-    }
-}
-
-
-.press-module {
-    width: 100%;
-    height: 110px;
-    background-color: #e9e9e9;
+  .list-step:before {
+    width: 24px;
+    height: 24px;
+    float: left;
+    background-color: #f6f7ef;
+    color: $brand-4;
+    @include font-size( 12 );
+    @include line-height( 24 );
     text-align: center;
-}
+    border: solid 1px $brand-3;
+    margin-right: 0.5em;
+    @include border-radius( 50% );
+  }
 
-
-.hkrw-steps-wrapper {
-    margin-bottom: 46px;
-
-    .title {
-        margin-bottom: 60px;
-    }
-
-    .hkrw-steps {
-        width: 660px;
-    }
-
-    .hkrw-step {
-        min-height: 50px;
-        background-image: url(/images/pages/home/hkrw-steps.png);
-        @include line-height( 22 );
-        padding-left: 60px;
-        margin-bottom: 32px;
-
-        &.step-heart    { background-position: 0 0; }
-        &.step-book     { background-position: 0 -350px; }
-        &.step-card     { background-position: 0 -700px; }
-    }
-}
-
-// Hack to overwrite the default style for the opened summary
-#home details[open] summary:before { content: ""; }
-#home details[open] summary:after {
-    width: 10px;
-    height: 8px;
-    @include inline-block;
-    background-image: url(/images/icons/icon-greenArrow-down.png);
-    background-repeat: no-repeat;
-    content: "\0020";
-    margin-left: 14px;
-}
-
-
-// The "Want to be a Keaton Row stylist?" ribbon between the steps
-// and the blog articles
-.join-now {
-    width: 952px;
-    height: 47px;
-    background-image: url(/images/pages/home/join-now-ribbon.jpg);
-    background-position: left top;
-    margin-bottom: 54px;
-
-    .hide-text {
-        width: 554px;
-        height: 47px;
-        display: block;
-        margin: 0 auto;
-    }
-}
-
-#home .btn-blog {
-    margin-right: 20px;
-}
-
-
-// The Sharing banner on the left side
-.share-banner-horizontal {
-    display: block;
-    margin-right: 50px;
+  .step-1:before { content: "1"; }
+  .step-2:before { content: "2"; }
+  .step-3:before { content: "3"; }
+  .step-4:before { content: "4"; }
+  .step-5:before { content: "5"; }
 }
