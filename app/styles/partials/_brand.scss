@@ -7,7 +7,7 @@ $brand-1: #fa6900; // Orange
 $brand-2: #69d2e7; // Baby Blue
 $brand-3: #e0e4cc; // Light Yellowish
 $brand-4: #828570; // Light Brown
-$brand-5: #ffffff; //
+$brand-5: #a6b5c5; // Dark Blue
 $brand-6: #ffffff; //
 $brand-7: #ffffff; //
 $brand-8: #ffffff; //
@@ -206,7 +206,9 @@ thead {
 
 // Icons
 // -----------------------------------------------------------------------------------
-
+.icon-edit {
+  background-image: url(/images/icons/cog_16x16.png);
+}
 
 // Badges
 
