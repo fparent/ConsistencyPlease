@@ -2,6 +2,7 @@
 // MODULES
 //************************************************************************************
 
+// Boxes and lightboxes that can be closed or removed
 .box-closable {
   height: auto;
   background-color: #d6f0f7;
@@ -11,4 +12,39 @@
   margin: 0 auto 4em;
   position: relative;
   @include box-shadow( 0 0 12px 0 rgba( 0, 0, 0, 0.20 ) );
+}
+
+
+// Preview sections in the main view
+.preview {
+  background-color: #F4FCFF;
+  text-align: left;
+  padding: 3em 2em 2em;
+  margin: 0 0 6em;
+  position: relative;
+
+  // The small edit icon next to the section's title in the preview
+  .icon-edit {
+    width: 16px;
+    height: 16px;
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+  }
+
+  // Show the edit button only when the cursor if over the section
+  &:hover .icon-edit {
+    display: block;
+  }
+}
+
+
+// Blue Nameplate containing the section's title in the preview pane
+.nameplate {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: -16px;
+  left: 0;
 }

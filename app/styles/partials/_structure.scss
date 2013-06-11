@@ -18,9 +18,21 @@ main {
 
 .content {
   min-height: 500px;
+  background-color: #fff;
+  padding: 2em 80px 0;
   position: relative;
+
+  @include box-shadow( 0 0 12px rgba( 0, 0, 0, 0.20 ) );
+  @include transition-property( all );
+  @include transition-duration( 0.2s );
+  @include transition-timing-function( ease-in-out );
 }
 
+
+// Special double borders around these containers
+.accent-box {
+  border: double 3px #a6b5c5;
+}
 
 .spacer {
     margin: 32px 0;
@@ -116,5 +128,9 @@ main {
 // Footer
 // -----------------------------------------------------------------------------------
 .site-footer {
-
+  background-color: $brand-5;
+  color: #fff;
+  @include font-size( 12 );
+  padding: 2em;
+  margin: 4em 0;
 }
